@@ -1,0 +1,12 @@
+:root {
+    --ideal-viewport-width: 1600;
+  }
+  
+  @function scaleValue($value) {
+    @return calc(
+      #{$value} * (clamp(350px, 100vw, 3840px) / var(--ideal-viewport-width))
+    );
+  }
+  .cardHdeading {
+    font-size: #{scaleValue(30)};
+  }
