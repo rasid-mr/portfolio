@@ -1,30 +1,55 @@
- 
+// style for logo and twitter logo
+.twitter {
+  position: absolute;
+
+  right: 42rem;
+  @include respond(phone) {
+    right: 10rem;
+  }
+
+  @include respond(big-desktop) {
+    right: 58rem;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    height: $nav-height;
+  }
+  &__logo {
+    width: 2.5rem;
+  }
+}
+.name {
+  position: absolute;
+
+  &__container {
+    height: $nav-height;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+// style for nav only
 .navigation__list {
   display: grid;
   grid-auto-flow: column;
-  justify-content: end;
+  justify-content: flex-end;
   grid-template-columns: repeat(3, 120px);
-  grid-template-rows: 10rem;
+  grid-template-rows: $nav-height;
   margin: 0;
   place-items: center;
   padding: 0;
   font-size: 2rem;
 }
- 
-
-// .router-link-active {
-//   transform: opacity .2s;
-
-//   &:hover {
-//     opacity: .8;
-//   }
-// }
-
 
 .router-link-exact-active {
   text-decoration: underline;
-
-
 }
 
 li {
@@ -44,7 +69,7 @@ a {
   display: none;
 }
 
-// media query for mobile
+// media query for mobile nav only
 
 @media (max-width: 37.5em) {
   .navigation__list {
@@ -56,7 +81,6 @@ a {
     //     display: none;
     // }
     height: 10rem;
-     
 
     &__button {
       display: inline-block;
@@ -169,7 +193,6 @@ a {
         height: 2px;
         background-color: rgba(0, 0, 0, 0.558);
         display: inline-block;
-        
       }
 
       &::before,

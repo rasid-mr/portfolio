@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
  
 html {font-size: 62.5%;} /*10px*/
 
@@ -24,6 +24,9 @@ body {
   line-height: 1.75;
   color: #000000;
   margin: 0 4rem;
+  @media (min-width: 2000px) {
+    margin:0 20rem;
+  }
 }
 
 p {margin-bottom: 1rem;}

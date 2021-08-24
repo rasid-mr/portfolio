@@ -2332,7 +2332,11 @@
     </div>
 </template>
  
-
+<script>
+export default {
+	
+}
+</script>
 <style lang="scss">
     .st0{fill:#6C63FF;}
 	.st1{fill:#3F3D56;}

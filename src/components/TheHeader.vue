@@ -59,45 +59,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.twitter {
-  position: absolute;
-  // height: 10rem;
-  // width: 10rem;
-  // right: clamp(20rem, 42rem, 50rem);
-  right: 42rem;
-  @media (max-width: 37.5em) {
-    right: 10rem;
-  }
-}
-.twitter__container {
-  display: flex;
-  align-items: center;
 
-  justify-content: center;
-
-  height: 10rem;
-}
-.twitter__logo {
-  width: 3rem;
-  position: relative;
-}
-.name {
-  position: absolute;
-
-  // left: 4rem;
-
-  &__container {
-    height: 10rem;
-    font-size: 2rem;
-    // height: 10rem;
-    display: flex;
-    align-items: center;
-
-    &-logo {
-      // height: 10rem;
-    }
-  }
-}
 
 // @use '../../assets/sass/header';
 @import "../assets/sass/_header.scss";
