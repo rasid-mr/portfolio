@@ -8,12 +8,12 @@ export default defineConfig({
       scss: {
         additionalData: `
         :root {
-          --ideal-viewport-width: 1600;
+          
         }
         
-        @function scaleValue($value) {
+        @function scaleValue($value, $ideal-viewport-width:1600) {
           @return calc(
-            #{$value} * (clamp(350px, 100vw, 3840px) / var(--ideal-viewport-width))
+            #{$value} * (clamp(350px, 100vw, 3840px) / #{$ideal-viewport-width})
           );
         }
         .cardHdeading {
