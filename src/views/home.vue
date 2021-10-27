@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+
+  <div class="parent-Container">
   <div  class="wrapping popBlob">
      </div>
     <div class="hero">
@@ -4821,6 +4822,7 @@ import TheShowcase from '../components/TheShowcase.vue';
 import TheFooter from '../components/TheFooter.vue'
 export default {
   components: {
+    
     primaryButton,
     TheSkill,
     TheShowcase,
@@ -5344,7 +5346,9 @@ export default {
 }
 .hero {
   grid-column:1/2;
-  
+   
+  display: flex;
+  align-content: center;
   isolation: isolate;
 }
 
@@ -5353,7 +5357,7 @@ export default {
   margin-top: 0.5rem;
   width: #{scaleValue(500)};
 }
-.container {
+.parent-Container {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns:#{scaleValue(545)} #{scaleValue(893)} ;
@@ -5369,12 +5373,12 @@ export default {
 }
 // computer svg
 #portfolio {
-  margin-top: #{scaleValue(-130)};
-  transform: translateX(4rem);
+  margin-top: #{scaleValue(-48)};
+  transform: translateX(2rem);
 }
 .hero {
   display: grid;
-  justify-items: center;
+ 
   // height: calc(100vh - 9rem);
   // height: #{scaleValue(600)};
   // background: url("../assets/circle-scatter-haikei(2).svg");
@@ -5384,16 +5388,13 @@ export default {
   }
 
   &_contact {
-    width: 35%;
+ 
     text-transform: uppercase;
     height: min-content;
-    //  @include respond(phone) {
-    //    font-size: #{scaleValue(40)};
-    //    padding: .2rem .2rem;
-    //  }
-    padding: #{scaleValue(0.8rem)};
-    // margin: 2rem;
-    margin-top: #{scaleValue(-40)};
+ 
+    padding: .8rem .8rem;
+   
+    margin-top: #{scaleValue(30)};
     
     justify-self: flex-start;
   }

@@ -74,7 +74,7 @@ export default {
 <style lang="scss" scoped>
 .show {
   height: 100vh;
-  background: url("../assets/background-skillshowcase.svg");
+  // background: url("../assets/background-skillshowcase.svg");
   background-size: cover;
   //   margin-top: -1.8rem;
   padding: 0 #{scaleValue(80)};
@@ -140,42 +140,7 @@ img {
 
 // if image is not avaibable for any reason.
 
-img::before {
-  background: linear-gradient(to right, #bdc3c7, #2c3e50);
-  border: 1px dashed hsl(0, 0%, 66.7%);
-  display: block;
-  height: 100%;
-  border-radius: 4px;
-  content: " ";
-  position: absolute;
-  width: 100%;
-}
 
-img::after {
-  content: attr(alt);
-  font-weight: bold;
-  position: absolute;
-  height: 100%;
-  left: 0px;
-  text-align: center;
-  top: 1px;
-  width: 100%;
-}
-
-img[alt] {
-  text-align: center;
-  font-weight: bold;
-  font-size: 2rem;
-  color: $color-primary-violet;
-}
-
-@media screen and (min-width: 48em) {
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.6em;
-  }
-}
 
 // intersection observer api
 

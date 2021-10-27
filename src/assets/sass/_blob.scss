@@ -61,7 +61,7 @@
 
 $base-bg: #f3f3f3;
 $n: 8;
-$pini: 30%;
+$pini: 50%;
 $pfin: $pini;
 $bdim: 15rem;
 $size: $bdim $bdim;
@@ -82,8 +82,8 @@ $blur: 5px;
 	@if $i > 0 {
 		$pr: rand();
 		$pa: rand(360, 0, 1deg);
-		$pini: $pini, 30%;
-		$pfin: $pfin, calc(30% + #{$pr*cos($pa)}) calc(30% + #{$pr*sin($pa)});
+		$pini: $pini, 50%;
+		$pfin: $pfin, calc(50% + #{$pr*cos($pa)}) calc(50% + #{$pr*sin($pa)});
 		$cs: rand(10);
 		$size: $size, $cs $cs;
 	}
@@ -95,7 +95,7 @@ $blur: 5px;
 
 .wrapping {
 	--gimg: radial-gradient(#000 67%, transparent 68%);
-	background: linear-gradient($color-primary-cyan calc(30% - #{$bdim}), $color-primary-violet calc(30% + #{$bdim}));
+	background: linear-gradient($color-primary-cyan calc(50% - #{$bdim}), $color-primary-violet calc(50% + #{$bdim}));
 	
 	&:before {
 		display: block;

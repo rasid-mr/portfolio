@@ -1,13 +1,20 @@
 <template>
+<span>
+
+
     <div class="footer">
         <h2>Get in touch</h2>
         <primary-button class="mailTo" @click="mailTo">Mail Me</primary-button>
 
     </div>
+ 
+  </span>
 </template>
 <script>
+
 import primaryButton from '../Layout/primary-button.vue'
 export default {
+      data: () => ({ value: 'recent' }),
     components: {
         primaryButton
     },
@@ -21,7 +28,7 @@ export default {
 <style lang="scss" scoped>
     .footer {
         height: 40vh;
-        background: url('../assets/footer.svg');
+        background: #001220;
         color: $color-primary-pink;
         display: flex;
         flex-direction: column;
@@ -31,14 +38,16 @@ export default {
         
     }
     .mailTo {
-        padding: #{scaleValue(10)} #{scaleValue(20)};
+        
         margin-top: #{scaleValue(30)};
         margin-left: #{scaleValue(100)};
         width: 12%;
-        font-size: #{scaleValue(40)};
+        
+       
         display: flex;
+         
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         
        
 

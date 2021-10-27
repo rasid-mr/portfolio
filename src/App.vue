@@ -4,10 +4,10 @@
 </template>
 
 <script>
-import TheHeader from "./components/TheHeader.vue";
+import TheHeader from './components/TheHeader.vue'
 export default {
   components: {
-    TheHeader,
+   TheHeader
   },
 };
 </script>
@@ -61,15 +61,15 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: #{scaleValue(56.53)};
+  font-size: #{scaleValue(56.53)} !important;
 }
 
 h2 {
-  font-size: #{scaleValue(39.98)};
+  font-size: #{scaleValue(39.98)} !important;
 }
 
 h3 {
-  font-size: #{scaleValue(28.27)};
+  font-size: #{scaleValue(28.27)} !important;
 }
 
 h4 {
@@ -79,9 +79,40 @@ h4 {
 h5 {
   font-size: 1.414rem;
 }
+ img::before {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+  border: 1px dashed hsl(0, 0%, 66.7%);
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  content: " ";
+  position: absolute;
+  width: 100%;
+}
 
-small,
-.text_small {
-  font-size: 0.707rem;
+img::after {
+  content: attr(alt);
+  font-weight: bold;
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  text-align: center;
+  top: 1px;
+  width: 100%;
+}
+
+img[alt] {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: $color-primary-violet;
+}
+
+@media screen and (min-width: 48em) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.6em;
+  }
 }
 </style>
