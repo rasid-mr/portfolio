@@ -4,10 +4,10 @@
       <h2>A quality Website can bring opportunities for you</h2>
 
       <details open>
-        <summary> <span> HTML, CSS, JAVASCRIPT</span>
-           <span>
-          <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-          </span>
+        <summary @click.self="arrowChange" > <span> HTML, CSS, JAVASCRIPT</span>
+         
+          <svg class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+        
         </summary>
         <p>
           I learned HTML in my college days. Seeing the hello world in the
@@ -19,7 +19,7 @@
       <details open>
         <summary  @click.self="arrowChange"> <span>  VUE.JS</span>
       
-          <svg id="arrowRotate" @click.self="rotate"   class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+          <svg    class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
         </summary> 
         <p>
           Vue.js is one of the most famous javascript framework right now. It
@@ -29,10 +29,10 @@
         </p>
       </details>
       <details open>
-        <summary>  <span>SIGNLE PAGE APP(SPA)</span>
-           <span>
+        <summary  @click.self="arrowChange">  <span>SIGNLE PAGE APP(SPA)</span>
+       
           <svg class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-          </span>
+         
         </summary>
         <p>
           Due to the covid-19 pandemic, everything is going online from offline.
@@ -74,48 +74,64 @@ export default {
       if(e.target.children) {
   e.target.children[1].classList.toggle('rotation');
       }
-      else {
-        e.target.stopPropagation();
-        
-      }
+     
        
       
     },
-    // rotate(e) {
-    //   e.target.classList.toggle('rotation')
-    // }
+ 
   },
 };
 </script>
 
 <style lang="scss" scoped>
+h2 {
+  // text-decoration:;
+  font-weight: bold;
+}
 .transitionArrow {
      transition: transform .3s;
 }
 .arrow {
  fill: $color-primary-pink;
- z-index: -2;
+  
+ width: #{scaleValue(24)};
 }
 .rotation {
   transform: rotate(180deg);
 }
-#arrowRotate {
-  
-}
+ 
 
  
 
 .skill {
+  margin-top: 10rem;
+  @include respond(tab-port) {
+    margin-top: 5rem;
+  }
+  
+   
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(2, 1fr);
+   height: 100vh;
 
-  // background: url("../assets/circle-scatter-haikei.svg");
-  background-size: cover;
+  @include respond(tab-port) {
+    grid-auto-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    height: 85vh;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+
+  }
+  @include respond(phone) {
+    height: 60vh;
+  }
+
+  
   padding: 0 #{scaleValue(80)};
 
   &_story {
-    color: $color-primary-pink;
+    color: rgba($color-black, .6);
     padding: 2px 6px;
 
     border: none;
@@ -128,29 +144,45 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 details {
-  padding: 1rem #{scaleValue(50)};
+  padding: 1rem 0;
+  
+  
    
 }
 details[open] > summary {
   color: $color-primary-cyan;
+  
  
 }
 
 details[open] > p {
+  color: #000;
   height: 33%;
   font-size: #{scaleValue(20)};
+  @include respond(tab-port) {
+    font-size: 1.2rem;
+  }
+  padding-top: #{scaleValue(10)};
   @include respond(phone) {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 summary {
   font-size: #{scaleValue(28.27)};
-  padding: .5rem #{scaleValue(10)};
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+  padding: #{scaleValue(5)} #{scaleValue(8)};
+  background:rgb(243, 243, 243, .2);
+  @include respond(phone) {
+    padding: 0 #{scaleValue(10)};
+  }
   border: 1px solid #aaa;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 2px -2px rgba(#000, .1);
    
 }
  
@@ -162,20 +194,21 @@ summary {
 .composition {
   position: relative;
 
-  height: 100vh;
-  @media screen and (max-width: 60rem) {
-    height: 60vh;
-  }
+  height: 100%;
+  
+  
+  
+
 
   &_photo {
     display: block;
     width: #{scaleValue(400)};
-    filter: blur(4px);
+  
+    // filter: blur(4px);
     height: #{scaleValue(266.95)};
+    
 
-    @media screen and (max-width: 56.5em) {
-      //  width: #{scaleValue(250)};
-    }
+    
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
     border-radius: 2px;
     position: absolute;
@@ -185,22 +218,34 @@ summary {
     outline-offset: #{scaleValue(20)};
 
     &-one {
-      top: 32%;
-      left: 31%;
-    }
-    &-two {
       left: 44%;
       top: 11%;
-      // transform: translate();
+      @include respond(tab-port) {
+        top: 18%;
+      left: 10%;
+      }
+    }
+    &-two {
+     top: 32%;
+      left: 31%;
+      @include respond(tab-port) {
+        top: 11%;
+      left: 35%;
+      }
     }
     &-three {
       left: 12%;
       top: 53%;
+
+         @include respond(tab-port) {
+        top: 18%;
+      left: 59%;
+      }
     }
     &:hover {
       outline: #{scaleValue(15)} solid $color-primary-pink;
       transform: scale(1.05) translateY(-0.5rem);
-      filter: blur(0);
+      // filter: blur(0);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
       z-index: 20;
     }

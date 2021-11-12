@@ -44,18 +44,6 @@ const router = createRouter({
   routes,
 });
 
-router.afterEach((to, from) => {
- const inputVal = document.getElementsByClassName('navigation__checkbox');
- const list = document.querySelector('.navigation__list')
-console.log(inputVal)
  
-// if(to)
-
- 
-const background = document.querySelector('.navigation__background')
-
-
- 
-})
 
 export default router;

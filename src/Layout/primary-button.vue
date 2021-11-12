@@ -3,7 +3,7 @@
     <slot> Click Me </slot>
   </button>
 </template>
-
+ 
 <style lang="scss" scoped>
 .btn-primary {
   background-color: $color-primary-violet;

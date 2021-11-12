@@ -1,7 +1,10 @@
 <template>
-  <nav class="navigation navbar navbar-light bg-light fixed-top">
+  <nav class="navigation navbar custom-height navbar-light bg-light fixed-top">
     <div class="container-fluid">
+      <router-link to='./home' class="logo">
       <a class="navbar-brand" href="#">SUMON</a>
+      </router-link>
+      
       <button
         class="navbar-toggler"
         type="button"
@@ -64,12 +67,27 @@ export default {};
 
 <style lang="scss">
 @import "bootstrap";
-
-.navbar-toggler {
-  padding: 0.5rem 1rem;
-
-  height: 5vh;
-}
+ 
+// .custom-height {
+//   height: #{scaleValue(87)};
+//   @include respond(tab-port) {
+//     height: 5vh;
+//   }
+  
+// }
+// .navbar-toggler {
+//   padding: 0.5rem 1rem;
+ 
+//   height: 5vh;
+//   @include respond(phone) {
+//     height: 5vh;
+//     padding: .25rem .5rem;
+//   }
+//   @include respond(tab-land) {
+//     height: 4.3vh;
+//     padding: .10rem .7rem;
+//   }
+// }
 .navbar-toggler,
 .navbar-toggler-icon {
   display: flex;
@@ -99,5 +117,8 @@ export default {};
 .navigation {
   z-index: 5000;
   padding: 0 #{scaleValue(80)};
+}
+.logo {
+ text-decoration: none;
 }
 </style>

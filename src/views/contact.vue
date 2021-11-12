@@ -1,15 +1,22 @@
 <template>
 
- <div>
- <p>ksdajffffffffffff</p>
- </div>
+  <the-footer></the-footer>
 </template>
+<script>
+import TheFooter from '../components/TheFooter.vue'
+export default {
+    components: {
+        TheFooter
+    }
 
+    
+}
+</script>
 
 <style>
-p {
-    height:200vh;
-}
+
+
+
 </style>
 
 

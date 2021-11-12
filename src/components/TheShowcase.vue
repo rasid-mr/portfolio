@@ -1,31 +1,49 @@
 <template>
   <div class="show" ref="el">
-    <h1>SHOWCASE</h1>
-    <h3>Built with Vue.js</h3>
+    <header>
+       
+    <h1 class="built">Built with Vue.js</h1>
+
+    </header>
+   
 
     <div class="show_website">
-      <img
-        src="../assets/1.png"
-        class="pic"
-        alt=" Photo for my Portfolio(thouhtco.com)"
-      />
+      <div class="slider">
+        <div class="slide">
+          <img
+            src="../assets/1.png"
+            class="pic"
+            alt=" Photo for my Portfolio(thouhtco.com)"
+          />
+        </div>
 
-      <img
-        src="../assets/2.png"
-        class="pic"
-        alt=" Photo for my Portfolio(thouhtco.com)"
-      />
-      <img
-        src="../assets/chemistry1.jpg"
-        class="pic"
-        alt="Chemistry Website Photo"
-      />
+        <div class="slide">
+          <img
+            src="../assets/2.png"
+            class="pic"
+            alt=" Photo for my Portfolio(thouhtco.com)"
+          />
+        </div>
 
-      <img
-        src="../assets/chemistry2.jpg"
-        class="pic"
-        alt="Chemistry Website PHoto"
-      />
+        <div class="slide">
+          <img
+            src="../assets/chemistry1.jpg"
+            class="pic"
+            alt="Chemistry Website Photo"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="../assets/chemistry2.jpg"
+            class="pic"
+            alt="Chemistry Website PHoto"
+          />
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -37,125 +55,255 @@ export default {
       observer: null,
     };
   },
+
+  // mounted() {
+  //   var observerCallback = function (entries, _) {
+  //     const [entry] = entries;
+  //     console.log(entry.target);
+  //     if (!entry.isIntersecting) return;
+
+  //     entries.forEach((entry) => {
+  //       if (entry.intersectionRatio > 0) {
+  //         entry.target.classList.add("section--hidden");
+  //         // console.log('well-done')
+  //       }
+  //     });
+  //   };
+
+  //   var obsOptions = {
+  //     root: null,
+  //     threshold: 0,
+  //   };
+
+  //   this.observer = new IntersectionObserver(observerCallback, obsOptions);
+
+  //   document.querySelectorAll(".pic").forEach((img) => {
+  //     this.observer.observe(img);
+  //   });
+
+
+  //   // slider 
+  
+  // },
+  // destroyed() {
+  //   this.observer.disconnect();
+  // },
   mounted() {
-    var observerCallback = function (entries, _) {
-      const [entry] = entries;
-      console.log(entry.target);
-      if (!entry.isIntersecting) return;
+      const slider = function () {
+  const slides = document.querySelectorAll('.slide');
+  const btnLeft = document.querySelector('.slider__btn--left');
+  const btnRight = document.querySelector('.slider__btn--right');
+  const dotContainer = document.querySelector('.dots');
 
-      // entry.target.classList.add('section--hidden')
-      //  document.querySelectorAll('.pic').forEach(img => {
-      //  img.classList.add('section--hidden')
+  let curSlide = 0;
+  const maxSlide = slides.length;
 
-      //
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio > 0) {
-          entry.target.classList.add("section--hidden");
-        }
-      });
-    };
-
-    var obsOptions = {
-      root: null,
-      threshold: 0,
-    };
-
-    this.observer = new IntersectionObserver(observerCallback, obsOptions);
-
-    document.querySelectorAll(".pic").forEach((img) => {
-      this.observer.observe(img);
+  // Functions
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        'beforeend',
+        `<button class="dots__dot" data-slide="${i}"></button>`
+      );
     });
-  },
-  destroyed() {
-    this.observer.disconnect();
+  };
+  
+
+  const activateDot = function (slide) {
+    // remove the style from ex-active dot
+    document
+      .querySelectorAll('.dots__dot')
+      .forEach(dot => dot.classList.remove('dots__dot--active'));
+    // adding the style to active dot.
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add('dots__dot--active');
+  };
+
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    // length isn't 0 based,
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+    createDots();
+
+    activateDot(0);
+  };
+  init();
+
+  // Event handlers
+  btnRight.addEventListener('click', nextSlide);
+  btnLeft.addEventListener('click', prevSlide);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') prevSlide();
+    e.key === 'ArrowRight' && nextSlide();
+  });
+
+  dotContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dots__dot')) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+};
+slider();
   },
 };
 </script>
+
 <style lang="scss" scoped>
 .show {
-  height: 100vh;
-  // background: url("../assets/background-skillshowcase.svg");
-  background-size: cover;
-  //   margin-top: -1.8rem;
-  padding: 0 #{scaleValue(80)};
-
-  @include respond(tab-port) {
-    height: 80vh
-  }
-  @media only screen and (max-width:650px) {
+  margin-top: 15rem;
+   margin-bottom: 8rem;
+   padding: 0 #{scaleValue(80)};
+  @include respond(tab-land) {
+    margin-top: 0rem;
     
-  
-    height: 100vh;
+   
   }
+  @include respond(tab-port) {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  box-sizing: border-box;
+}
+// slider
+
+.slider {
+  max-width: 110rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 1rem;
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+button .dots_dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); 
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+}
+
  
-
-  &_website {
-    margin: 0 #{scaleValue(50)};
-    display: grid;
-    grid-auto-flow: row;
-    row-gap: #{scaleValue(25)};
-
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-     @media only screen and (max-width:650px) {
-      grid-template-columns:min-content;
-      grid-template-rows: repeat(4, minmax(15rem, 1fr));
-      gap: 0;
-    }
-    // place-items: center;
-
-    justify-content: space-evenly;
-  }
+// .pic {
+//   display: block;
+//   width: 30rem;
+//   aspect-ratio: 16/9;
+// }
+.built{
+  margin: 2rem 0;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+   background: -webkit-linear-gradient($color-primary-pink, $color-primary-violet);
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h1 {
-  padding-top: 5rem;
-  // margin-left: #{scaleValue(50)};
-}
-h3 {
-  margin-left: #{scaleValue(50)};
-}
-h1,
-h3 {
-  color: $color-primary-pink;
-}
-
-// img
-
-img {
-  display: block;
-  width: #{scaleValue(500)};
-  aspect-ratio: 16/9;
-  @include respond(tab-port) {
-    width: 25rem;
-    height: auto;
-  }
-  transition: transform 0.3s;
-  height: #{scaleValue(243.19)};
-  position: relative;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-// if image is not avaibable for any reason.
-
-
-
-// intersection observer api
-
-.section--hidden {
-  animation: slide 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateY(20rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  color: $color-primary-violet;
 }
 </style>

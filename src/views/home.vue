@@ -9,7 +9,7 @@
         Hey there, I am Sumon, I am front end developer.
       </h1>
 
-      <primary-button class="hero_contact"> contact me </primary-button>
+      <primary-button @click="mailTo" class="hero_contact"> contact me </primary-button>
     </div>
    
  
@@ -4811,7 +4811,8 @@
   <the-skill></the-skill>
   <the-showcase></the-showcase>
   <the-footer></the-footer>
-
+  <div class="helper"></div>
+   <div ref="loading" class="loading-bar">jfskfksafjsklfdslkfa</div>
 </template>
 
 <script>
@@ -4819,7 +4820,9 @@ import anime from "animejs";
 import primaryButton from "../Layout/primary-button.vue";
 import TheSkill from '../components/TheSkill.vue';
 import TheShowcase from '../components/TheShowcase.vue';
-import TheFooter from '../components/TheFooter.vue'
+import TheFooter from '../components/TheFooter.vue';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default {
   components: {
     
@@ -4865,7 +4868,9 @@ export default {
         }
       })
 
-       const popBlob = document.querySelector('.popBlob');
+// pop blob animation
+if(window.innerWidth >=900) {
+    const popBlob = document.querySelector('.popBlob');
     let observerCallbackblob = function (entries, _) {
       const [entry] = entries;
       console.log(entry);
@@ -4874,15 +4879,8 @@ export default {
         
       } else {
       popBlob.classList.remove('wrapping')
-
       }
-      
-
-
-      
-
     };
-
     var obsOptions = {
       root: null,
       threshold: [0, .1],
@@ -4892,12 +4890,33 @@ export default {
 
     
       this.observer.observe(popBlob);
-
+} else{
+  console.log('small screen')
+}
+   
       
+        window.addEventListener('resize', () => {
+      if(window.innerWidth == 900) {
+           this.observer.disconnect();
+      }  
+      
+    });
 
+  
+     gsap.registerPlugin(ScrollTrigger);
+      const {loading} = this.$refs;
+      gsap.to('.loading-bar', {
+        scrollTrigger: {
+          trigger:'.loading-bar',
+          start:'bottom center'
+        },
+        x:300,
+        duration:3
+      })
   },
   destroyed() {
     this.observer.disconnect();
+
   },
   methods: {
      
@@ -5325,6 +5344,10 @@ export default {
           11070
         )
     },
+
+      mailTo() {
+            window.open('mailto:mohtasim.chemist@gmail.com');
+        }
    
   
   }
@@ -5333,6 +5356,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../assets/sass/_blob.scss';
+.helper {
+  width: 20rem;
+  height: 20rem;
+  background: red;
+}
+.loading-bar {
+  margin-bottom: 100vh;
+}
 // cloud hide when out of the window
 // sun orbit
 
@@ -5341,8 +5372,16 @@ export default {
   grid-row: 1/-1;
 }
 .wrapping {
-  grid-column:1/2
+  grid-column:1/2;
+  @include respond(tab-port) {
+    display: none;
+  }
 
+}
+.popblob {
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 .hero {
   grid-column:1/2;
@@ -5355,6 +5394,7 @@ export default {
 //  svg id visual
 #visual {
   margin-top: 0.5rem;
+ 
   width: #{scaleValue(500)};
 }
 .parent-Container {
@@ -5363,10 +5403,19 @@ export default {
   grid-template-columns:#{scaleValue(545)} #{scaleValue(893)} ;
   overflow: hidden;
   padding-left:#{scaleValue(80)};
+  @include respond(phone) {
+    height: 45vh;
+    justify-items: center;
+    align-items: center;
+    
+  }
 
 }
 .hero_header {
   font-size: #{scaleValue(56.5)};
+  @include respond(tab-port) {
+    // font-size: #{scaleValue(79)};
+  }
   color: $color-primary-pink;
   font-weight: 700;
   // padding: 0 1.4rem;
@@ -5375,6 +5424,12 @@ export default {
 #portfolio {
   margin-top: #{scaleValue(-48)};
   transform: translateX(2rem);
+   @include respond(tab-port) {
+    margin-top: #{scaleValue(20)};
+  }
+  @include respond(phone) {
+    margin-top: #{scaleValue(50)};
+  }
 }
 .hero {
   display: grid;
@@ -5383,9 +5438,7 @@ export default {
   // height: #{scaleValue(600)};
   // background: url("../assets/circle-scatter-haikei(2).svg");
 
-  &_header {
-    align-self: center;
-  }
+  
 
   &_contact {
  
