@@ -1,6 +1,14 @@
 <template>
   <the-header></the-header>
-  <router-view> </router-view>
+
+  <router-view v-slot="{Component, route}"> 
+  <transition 
+  mode="out-in"
+  name="page"
+  >
+  <component :is="Component" />
+  </transition>
+  </router-view>
 </template>
 
 <script>
@@ -116,4 +124,32 @@ h5 {
 //     padding: 0.6em;
 //   }
 // }
+
+
+.page-enter-active {
+  animation: acrossIn .45s ease-out both;
+} 
+
+.page-leave-active {
+  animation: acrossOut .65s ease-in both;
+} 
+
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes acrossOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
 </style>

@@ -18,7 +18,7 @@
    </div>
 </div>
 
-<div class="hello">go low</div>
+ 
 
 </template>
 
@@ -26,16 +26,16 @@
  
 export default {
 
-  mounted() {
-     gsap.registerPlugin(ScrollTrigger);
-  gsap.from({
-      scrollTrigger: {
-        trigger:'.hello',
-        start:'bottom center'
-      },
-      x:600
-    })
-  },
+  // mounted() {
+  //    gsap.registerPlugin(ScrollTrigger);
+  // gsap.from({
+  //     scrollTrigger: {
+  //       trigger:'.hello',
+  //       start:'bottom center'
+  //     },
+  //     x:600
+  //   })
+  // },
 };
 </script>
 

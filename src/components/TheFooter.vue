@@ -66,12 +66,12 @@ export default {
   }
 }
 .mailTo {
-  margin-left: #{scaleValue(80)};
+  // margin-left: #{scaleValue(80)};
   width: 50%;
 }
 h2 {
-  margin-left: #{scaleValue(80)};
-  margin-top: #{scaleValue(25)};
+  // margin-left: #{scaleValue(80)};
+  // margin-top: #{scaleValue(25)};
 
 
 }

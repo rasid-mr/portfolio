@@ -1,8 +1,10 @@
 <template>
+<div>
+
 
   <div class="parent-Container">
-  <div  class="wrapping popBlob">
-     </div>
+  <!-- <div  class="wrapping popBlob">
+  </div> -->
     <div class="hero">
        
       <h1 class="hero_header">
@@ -13,7 +15,7 @@
     </div>
    
  
-    <svg
+      <svg
       version="1.1"
       id="portfolio"
       @click.once="computerAnimation"
@@ -4806,13 +4808,12 @@
           height="1.4"
         />
       </g>
-    </svg>
+      </svg>
   </div>
   <the-skill></the-skill>
   <the-showcase></the-showcase>
   <the-footer></the-footer>
-  <div class="helper"></div>
-   <div ref="loading" class="loading-bar">jfskfksafjsklfdslkfa</div>
+ </div>
 </template>
 
 <script>
@@ -4821,8 +4822,7 @@ import primaryButton from "../Layout/primary-button.vue";
 import TheSkill from '../components/TheSkill.vue';
 import TheShowcase from '../components/TheShowcase.vue';
 import TheFooter from '../components/TheFooter.vue';
-import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
 export default {
   components: {
     
@@ -4848,7 +4848,7 @@ export default {
             duration:6999,
             direction:'alternate',
             loop:true,
-            delay:6999,
+            delay:8999,
              easing: function(el, i, total) {
            return function(t) {
            return Math.pow(Math.sin(t * (i + 1)), total);
@@ -4861,6 +4861,7 @@ export default {
         duration:6999,
         direction:'alternate',
         loop:true,
+        delay:2000,
         easing: function(el, i, total) {
            return function(t) {
            return Math.pow(Math.sin(t * (i + 1)), total);
@@ -4869,50 +4870,41 @@ export default {
       })
 
 // pop blob animation
-if(window.innerWidth >=900) {
-    const popBlob = document.querySelector('.popBlob');
-    let observerCallbackblob = function (entries, _) {
-      const [entry] = entries;
-      console.log(entry);
-      if (entry.isIntersecting) {
-        popBlob.classList.add('wrapping')
+// if(window.innerWidth >=900) {
+//     const popBlob = document.querySelector('.popBlob');
+//     let observerCallbackblob = function (entries, _) {
+//       const [entry] = entries;
+//       console.log(entry);
+//       if (entry.isIntersecting) {
+//         popBlob.classList.add('wrapping')
         
-      } else {
-      popBlob.classList.remove('wrapping')
-      }
-    };
-    var obsOptions = {
-      root: null,
-      threshold: [0, .1],
-    };
+//       } else {
+//       popBlob.classList.remove('wrapping')
+//       }
+//     };
+//     var obsOptions = {
+//       root: null,
+//       threshold: [0, .1],
+//     };
 
-    this.observer = new IntersectionObserver(observerCallbackblob, obsOptions);
+//     this.observer = new IntersectionObserver(observerCallbackblob, obsOptions);
 
     
-      this.observer.observe(popBlob);
-} else{
-  console.log('small screen')
-}
+//       this.observer.observe(popBlob);
+// } else{
+//   console.log('small screen')
+// }
    
       
-        window.addEventListener('resize', () => {
-      if(window.innerWidth == 900) {
-           this.observer.disconnect();
-      }  
+    //     window.addEventListener('resize', () => {
+    //   if(window.innerWidth == 900) {
+    //        this.observer.disconnect();
+    //   }  
       
-    });
+    // });
 
   
-     gsap.registerPlugin(ScrollTrigger);
-      const {loading} = this.$refs;
-      gsap.to('.loading-bar', {
-        scrollTrigger: {
-          trigger:'.loading-bar',
-          start:'bottom center'
-        },
-        x:300,
-        duration:3
-      })
+     
   },
   destroyed() {
     this.observer.disconnect();
@@ -5355,15 +5347,8 @@ if(window.innerWidth >=900) {
 };
 </script>
 <style lang="scss" scoped>
-@import '../assets/sass/_blob.scss';
-.helper {
-  width: 20rem;
-  height: 20rem;
-  background: red;
-}
-.loading-bar {
-  margin-bottom: 100vh;
-}
+// @import '../assets/sass/_blob.scss';
+ 
 // cloud hide when out of the window
 // sun orbit
 
@@ -5371,18 +5356,18 @@ if(window.innerWidth >=900) {
 .wrapping, .hero {
   grid-row: 1/-1;
 }
-.wrapping {
-  grid-column:1/2;
-  @include respond(tab-port) {
-    display: none;
-  }
+// .wrapping {
+//   grid-column:1/2;
+//   @include respond(tab-port) {
+//     display: none;
+//   }
 
-}
-.popblob {
-  @include respond(tab-port) {
-    display: none;
-  }
-}
+// }
+// .popblob {
+//   @include respond(tab-port) {
+//     display: none;
+//   }
+// }
 .hero {
   grid-column:1/2;
    
