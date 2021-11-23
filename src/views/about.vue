@@ -5,7 +5,7 @@
    <h4 class="medium experience">My daily work and experience</h4>
    <h4 class="passionate">What do, I love and passionate.</h4>
    <div class="about">
-     <img src="../assets/sumon2.JPG" alt="">
+     <img src="../assets/Frame - Copy.png" alt="I am sumon">
      <p class='about-me-detail'>When I was 8 years old, my mom give me 1 taka everyday for tiffin. Oneday I thought I store my one taka everyday, after many days it will be huge😁. I was so happy just think about it, I am goonna rich🤑 . I stated to save money below the almary in our house. Everything going on smoothly. In the fouth day, when I save 3 taka from three days. So, finally I can just expense todays one taka on that day so that I can eat "JALMURRY". Ohh I can remember the taste it was so tasty. I think maybeone more "JALLMURRY", won't be a bad idea. Eventually I expense my all money in just one day🤣🤣🤣. Becoming rich has never been true😂. 
        <br>
        <br>
