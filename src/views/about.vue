@@ -1,8 +1,8 @@
 <template>
 <div class="app">
 
-   <h2 class="about-me">About me</h2>
-   <h4 class="experience">My daily work and experience</h4>
+   <h2 class="big about-me">About me</h2>
+   <h4 class="medium experience">My daily work and experience</h4>
    <h4 class="passionate">What do, I love and passionate.</h4>
    <div class="about">
      <img src="../assets/sumon2.JPG" alt="">
@@ -23,19 +23,11 @@
 </template>
 
 <script>
- 
+//  import {gsap} from 'gsap';
+//  import {ScrollTrigger} from 'gsap/ScrollTrigger'
 export default {
 
-  // mounted() {
-  //    gsap.registerPlugin(ScrollTrigger);
-  // gsap.from({
-  //     scrollTrigger: {
-  //       trigger:'.hello',
-  //       start:'bottom center'
-  //     },
-  //     x:600
-  //   })
-  // },
+ 
 };
 </script>
 
@@ -53,6 +45,7 @@ export default {
 // overflow: hidden;
 padding: 0 #{scaleValue(80)};
 color: $color-primary-pink;
+overflow: hidden;
  
  
 }

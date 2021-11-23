@@ -7,18 +7,21 @@
   </div> -->
     <div class="hero">
        
-      <h1 class="hero_header">
-        Hey there, I am Sumon, I am front end developer.
+      <h1 class="hero_header" ref="header">
+        <span class="hero_header-hey highlight"> Hey there, </span>
+        I am Sumon, I am a front end developer.
       </h1>
 
-      <primary-button @click="mailTo" class="hero_contact"> contact me </primary-button>
+      <primary-button @click="mailTo" ref="contact" class="hero_contact"> contact me </primary-button>
     </div>
    
- 
+ <div>
+   
+
       <svg
       version="1.1"
       id="portfolio"
-      @click.once="computerAnimation"
+      @mouseenter="computerAnimation"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       x="0px"
@@ -4809,6 +4812,7 @@
         />
       </g>
       </svg>
+ </div>
   </div>
   <the-skill></the-skill>
   <the-showcase></the-showcase>
@@ -4817,11 +4821,13 @@
 </template>
 
 <script>
+import {gsap} from 'gsap'
 import anime from "animejs";
 import primaryButton from "../Layout/primary-button.vue";
 import TheSkill from '../components/TheSkill.vue';
 import TheShowcase from '../components/TheShowcase.vue';
 import TheFooter from '../components/TheFooter.vue';
+
  
 export default {
   components: {
@@ -4838,6 +4844,29 @@ export default {
     }
   },
   mounted() {
+    // header animation 
+    const headerTimeline = gsap.timeline()
+    const {header} = this.$refs;
+    // const {contact} = this.$refs;
+    const contact = document.querySelector('.hero_contact')
+     headerTimeline.from(header, {
+          duration:1,
+          opacity:0,
+          x:-200,
+          delay:.2,
+          ease:"back.out"
+     })
+
+     headerTimeline.from(contact, {
+       duration:1,
+       opacity:0,
+       yPercent:-100,
+       delay:.2,
+      ease:"back.out"
+     }, '-=.5')
+
+
+
     console.log(document.querySelector('.wrapping'));
         const cloud = document.querySelectorAll('.cloud')
           const cloudRight = document.querySelector('.cloudRight')
@@ -5353,9 +5382,9 @@ export default {
 // sun orbit
 
 // overlap
-.wrapping, .hero {
-  grid-row: 1/-1;
-}
+// .wrapping, .hero {
+//   grid-row: 1/-1;
+// }
 // .wrapping {
 //   grid-column:1/2;
 //   @include respond(tab-port) {
@@ -5368,63 +5397,134 @@ export default {
 //     display: none;
 //   }
 // }
-.hero {
-  grid-column:1/2;
-   
-  display: flex;
-  align-content: center;
-  isolation: isolate;
-}
+ 
 
 //  svg id visual
-#visual {
-  margin-top: 0.5rem;
  
-  width: #{scaleValue(500)};
-}
 .parent-Container {
   display: grid;
   grid-auto-flow: column;
+  height: 100vh;
   grid-template-columns:#{scaleValue(545)} #{scaleValue(893)} ;
   overflow: hidden;
+  background: url("../assets/Frame.png");
+  background-position: left 100%;
+  background-origin: padding-box;
+  background-size: 100%;
+  background-repeat: no-repeat;
   padding-left:#{scaleValue(80)};
+  justify-items: center;
+  align-items: center;
+  @include respond(tab-port) {
+    height: 140vh;
+    background: url("../assets/Frame.png"), url("../assets/frame-tab.png");
+    background-size:140%, 100% ;
+    background-size: cover, cover;
+       background-position: left bottom, top right;
+    background-repeat: no-repeat, no-repeat;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    justify-items: flex-start;
+   
+  }
+   
   @include respond(phone) {
-    height: 45vh;
-    justify-items: center;
-    align-items: center;
+    height: 100vh;
+    background: url("../assets/Frame.png"), url("../assets/frame-tab.png");
+    background-size:140%, 100% ;
+    background-position: left bottom, top right;
+    background-size: cover, contain;
+    background-repeat: no-repeat, no-repeat;
+    
+   
     
   }
+  
 
 }
 .hero_header {
+  color: $color-primary-cyan;
+  font-weight: 600;
   font-size: #{scaleValue(56.5)};
+  margin-top: #{scaleValue(-65)};
+
+
   @include respond(tab-port) {
-    // font-size: #{scaleValue(79)};
+    font-size: #{scaleValue(80)};
   }
-  color: $color-primary-pink;
-  font-weight: 700;
-  // padding: 0 1.4rem;
+
+
+  @include respond(phone) {
+    font-size: #{scaleValue(80)};
+  }
+
+
+ 
+  &-hey {
+    --cyaninvert : invert($color-primary-cyan);
+    --gradient-primary: linear-gradient(to top left, #26a9e0,  	transparent);
+    position: relative;
+    color:rgba($color-primary-pink, .8);
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 95%;
+      z-index: -1;
+      opacity: 0.7;
+      transform: scale(1.07, 1.05) skewX(-15deg);
+      background-image: var(--gradient-primary);
+    }
+    @include respond(phone) {
+      // display: none;
+    }
+  }
 }
 // computer svg
 #portfolio {
-  margin-top: #{scaleValue(-48)};
-  transform: translateX(2rem);
-   @include respond(tab-port) {
+  margin-top: 0;
+  // transform: translateX(2rem) translateY(-3rem);
+  transform:translate(2rem, -3rem);
+  width:80rem;
+  overflow: hidden;
+  object-fit: contain;
+  @include respond(tab-port) {
+      transform: translate(0, 0);
     margin-top: #{scaleValue(20)};
+    width: #{scaleValue(1500)};
+    
+    
+     
+    
+     
   }
+ 
   @include respond(phone) {
-    margin-top: #{scaleValue(50)};
+    transform: translate(0, 0);
+    // width: =;
   }
+ 
+ @media (max-width:450px) {
+     width: #{scaleValue(2000)};
+     transform:translate(-2rem, -9rem)
+  }
+
+
 }
 .hero {
   display: grid;
- 
-  // height: calc(100vh - 9rem);
-  // height: #{scaleValue(600)};
-  // background: url("../assets/circle-scatter-haikei(2).svg");
-
+  grid-column:1/2;
   
-
+  @include respond(tab-port) {
+    align-self: flex-end;
+  }
+  
+  @include respond(phone) {
+    align-self: center;
+  }
   &_contact {
  
     text-transform: uppercase;
@@ -5435,6 +5535,21 @@ export default {
     margin-top: #{scaleValue(30)};
     
     justify-self: flex-start;
+    
+
+   
+
+
+
+  }
+
+  @include respond(tab-port) {
+    width: 55%;
+     
+
+  }
+  @media (max-width:450px) {
+    width:40%;
   }
 }
 

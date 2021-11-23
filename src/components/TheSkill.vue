@@ -1,10 +1,10 @@
 <template>
   <div class="skill">
-    <div class="skill_story">
-      <h2>A quality Website can bring opportunities for you</h2>
+    <div class="skill_story" ref="skillStory">
+      <h2 class="medium">A quality Website can bring opportunities for you</h2>
 
       <details open>
-        <summary @click.self="arrowChange" > <span> HTML, CSS, JAVASCRIPT</span>
+        <summary @click="arrowChange" >   HTML, CSS, JAVASCRIPT 
          
           <svg class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
         
@@ -17,7 +17,7 @@
         </p>
       </details>
       <details open>
-        <summary  @click.self="arrowChange"> <span>  VUE.JS</span>
+        <summary  @click="arrowChange">   VUE.JS 
       
           <svg    class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
         </summary> 
@@ -29,7 +29,7 @@
         </p>
       </details>
       <details open>
-        <summary  @click.self="arrowChange">  <span>SIGNLE PAGE APP(SPA)</span>
+        <summary  @click="arrowChange">   SIGNLE PAGE APP(SPA)
        
           <svg class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
          
@@ -68,17 +68,32 @@
 </template>
 
 <script>
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger'
 export default {
+  mounted() {
+    // const {skillStory} = this.$refs;
+    // const skillStory = document.querySelector('.skill')
+    // gsap.registerPlugin(ScrollTrigger)
+
+    // const skillStoryTimeline = gsap.timeline();
+    // skillStoryTimeline.from(skillStory, {
+    //   opacity:0,
+    //   duration:1,
+    //   // yPercent:30,
+    //   y:200,
+    //   delay:1,
+    //   ease:"back.out"
+  
+    // })
+
+
+  },
   methods: {
     arrowChange(e) {
-      if(e.target.children) {
-  e.target.children[1].classList.toggle('rotation');
-      }
-     
-       
-      
-    },
- 
+      if(e.srcElement.childNodes) { e.srcElement.childNodes[1].classList.toggle('rotation')}
+    }
+
   },
 };
 </script>
@@ -93,6 +108,7 @@ h2 {
 }
 .arrow {
  fill: $color-primary-pink;
+ pointer-events: none;
   
  width: #{scaleValue(24)};
 }
@@ -105,9 +121,16 @@ h2 {
 
 .skill {
   margin-top: 10rem;
+  margin-bottom: 15rem;
+  
   @include respond(tab-port) {
     margin-top: 5rem;
+    margin-bottom: 10rem;
   }
+  @include respond(phone) {
+    margin-bottom: 12rem;
+  }
+
   
    
   display: grid;
@@ -147,6 +170,7 @@ details {
   padding: 1rem 0;
   
   
+  
    
 }
 details[open] > summary {
@@ -156,15 +180,15 @@ details[open] > summary {
 }
 
 details[open] > p {
-  color: #000;
+  color: rgba($color-black, .6);
   height: 33%;
   font-size: #{scaleValue(20)};
   @include respond(tab-port) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   padding-top: #{scaleValue(10)};
   @include respond(phone) {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
   }
 }
 summary {

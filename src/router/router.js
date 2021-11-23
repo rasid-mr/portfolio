@@ -11,24 +11,21 @@ const routes = [
 {
   path:"/home",
   name:'Home',
-  component:home
+  component:home,
+  meta:{transition:'zero'}
+
 },
 
 {
   path:"/contact",
-  component:contact
+  component:contact,
+  meta:{transition:'page'}
 },
 {
 path:'/about',
-component:about
+component:about,
+meta:{transition:'page'}
 },
- 
-
-//   {
-//     path: "/article-list",
-//     name: "ArticleList",
-//     component: ArticleList,
-//   },
 
 ];
 

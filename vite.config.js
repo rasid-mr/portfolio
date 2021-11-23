@@ -24,6 +24,7 @@ export default defineConfig({
         $color-primary-pink: #F8485E;
         $color-primary-light: #EEEEEE;
         $color-primary-cyan:#00C1D4;
+        $background-color:  rgb(30, 30, 32);
         $color-white: #fff;
         $color-black: #000;
 

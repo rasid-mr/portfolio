@@ -16,6 +16,11 @@
   text-transform: uppercase;
   height: min-content;
   padding: 0.8rem 0.8rem;
+  font-weight: 600;
+  width: max-content;
+  @include respond(phone) {
+    font-size: 1rem;
+  }
 
   &:hover {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;

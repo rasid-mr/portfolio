@@ -1,7 +1,12 @@
 <template>
  
     <div class="footer">
-      <h2>Get in touch</h2>
+      <div>
+<h2 class="big">Get in touch</h2>
+      </div>
+      
+     
+      <div class="contact-social">
       <primary-button class="mailTo" @click="mailTo">Mail Me</primary-button>
       <div class="social">
         <a href="https://www.facebook.com/mohtasim.hasan.35">
@@ -31,7 +36,7 @@
         </a>
       </div>
     </div>
- 
+       </div>
 </template>
 <script>
 import primaryButton from "../Layout/primary-button.vue";
@@ -50,35 +55,41 @@ export default {
 <style lang="scss" scoped>
 .footer {
   height: #{scaleValue(295)};
-  background: linear-gradient(-45deg, #162c35 70%, #0c252f 100%);
+  background: rgb(11,6,8);
+  background: radial-gradient(circle, rgba(11,6,8,1) 7%, rgba(40,40,40,1) 25%, rgba(0,0,0,1) 100%);
   color: $color-primary-pink;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-flow: column;
-
+  // display: grid;
+  // grid-template-rows: repeat(2, 1fr);
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-auto-flow: column;
+  display: flex;
+  flex-flow: column;
   @include respond(phone) {
     height: #{scaleValue(600)};
   }
 
-  & h2 {
-    grid-column: 1/-1;
-  }
+  
 }
 .mailTo {
-  // margin-left: #{scaleValue(80)};
-  width: 50%;
+  margin-left: #{scaleValue(80)};
+  // width: max-content;
+  white-space: nowrap;
+   
 }
 h2 {
-  // margin-left: #{scaleValue(80)};
-  // margin-top: #{scaleValue(25)};
+  margin-left: #{scaleValue(80)};
+  padding-top: 2rem;
 
 
 }
-
+.contact-social {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
 svg {
   fill: $color-primary-cyan;
-  //   width: #{scaleValue(50)};
+   
   width: 5rem;
   @include respond(tab-port) {
     width: 4rem;
@@ -89,10 +100,6 @@ svg {
   margin: 0 1rem;
   cursor: pointer;
 }
-.social {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
+ 
 
 </style>

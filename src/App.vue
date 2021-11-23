@@ -4,7 +4,7 @@
   <router-view v-slot="{Component, route}"> 
   <transition 
   mode="out-in"
-  name="page"
+  :name=route.meta.transition
   >
   <component :is="Component" />
   </transition>
@@ -24,16 +24,17 @@ export default {
  
 html {
   font-size: 65.5%;
+  font-family: "Fira Sans", sans-serif;
   
 } /*10px*/
 
 body {
-  background: white;
+  // background: white;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
-  padding: 0;
+  color: #e7e7e7;
+     
   margin: 0;
   @include respond(big-desktop) {
      margin: 0 20rem;
@@ -52,42 +53,54 @@ h4,
 h5 {
   /* margin: 3rem 0 1.38rem; */
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
+   
   line-height: 1.3;
 }
 
-h1 {
+.big {
   margin-top: 0;
-  font-size: #{scaleValue(56.53)} !important;
+  font-size: #{scaleValue(56.53)};
   @include respond(phone) {
-    font-size: 1.66rem !important;
+    font-size: 1.66rem;
    
   }
 
 }
 
-h2 {
-  font-size: #{scaleValue(39.98)} !important;
+.medium {
+  font-size: #{scaleValue(39.98)}  ;
+  margin-bottom: #{scaleValue(30)};
   //   @include respond(phone) {
   //   font-size: 2rem !important;
   // }
   @include respond(tab-port) {
-    font-size: 2rem !important;
+    font-size: 2rem;
   }
 }
 
-h3 {
+.small {
   font-size: #{scaleValue(28.27)}  ;
   
 }
-
-h4 {
-  font-size: 1.999rem !important;
+//scrollbar
+html {
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
 }
 
-h5 {
-  font-size: 1.414rem;
+ body::-webkit-scrollbar {
+    width: 10px;
 }
+
+body::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+
+body::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+     
+}
+
 //  img::before {
 //   background: linear-gradient(to right, #bdc3c7, #2c3e50);
 //   border: 1px dashed hsl(0, 0%, 66.7%);
@@ -128,10 +141,12 @@ h5 {
 
 .page-enter-active {
   animation: acrossIn .45s ease-out both;
+  animation-delay: 1s;
 } 
 
 .page-leave-active {
   animation: acrossOut .65s ease-in both;
+   animation-delay: 1s;
 } 
 
 @keyframes acrossIn {
