@@ -93,11 +93,11 @@ html {
 }
 
 body::-webkit-scrollbar-track {
-    background-color: darkgrey;
+    background-color: rgb(218, 218, 218);
 }
 
 body::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
      
 }
 

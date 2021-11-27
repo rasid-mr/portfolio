@@ -204,9 +204,10 @@ unmounted() {
   display: flex;
   justify-content: center;
   align-items: center;
+   
   height: 100vh;
-  min-height: 100vh;
-  min-height: -webkit-fill-abailable;
+  // min-height: 100vh;
+  // min-height: -webkit-fill-abailable;
   background: rgb(30, 30, 32);
   margin-bottom: #{scaleValue(170)};
   @include respond(tab-port) {
@@ -219,8 +220,6 @@ unmounted() {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-height: 100vh;
-  min-height: -webkit-fill-abailable;
   margin: 0;
   background: rgb(30, 30, 32);
    @include respond(tab-port) {

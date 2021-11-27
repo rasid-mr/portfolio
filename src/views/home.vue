@@ -5405,6 +5405,7 @@ export default {
   display: grid;
   grid-auto-flow: column;
   height: 100vh;
+  min-height: 650px;
   grid-template-columns:#{scaleValue(545)} #{scaleValue(893)} ;
   overflow: hidden;
   background: url("../assets/Frame.png");
@@ -5417,14 +5418,16 @@ export default {
   align-items: center;
   @include respond(tab-port) {
     height: 140vh;
+    min-height: 950px;
     background: url("../assets/Frame.png"), url("../assets/frame-tab.png");
     background-size:140%, 100% ;
     background-size: cover, cover;
-       background-position: left bottom, top right;
+    background-position: left bottom, top right;
     background-repeat: no-repeat, no-repeat;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr;
     justify-items: flex-start;
+    
    
   }
    
@@ -5455,7 +5458,7 @@ export default {
 
 
   @include respond(phone) {
-    font-size: #{scaleValue(80)};
+    font-size: #{scaleValue(90)};
   }
 
 

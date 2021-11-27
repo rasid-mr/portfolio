@@ -120,7 +120,8 @@ h2 {
  
 
 .skill {
-  margin-top: 10rem;
+  // margin for free space
+  margin-top: 12rem;
   margin-bottom: 15rem;
   
   @include respond(tab-port) {
@@ -136,7 +137,8 @@ h2 {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(2, 1fr);
-   height: 100vh;
+  min-height: 650px;
+  height: 100vh;
 
   @include respond(tab-port) {
     grid-auto-columns: 1fr;
