@@ -75,7 +75,7 @@ margin-top: 5rem;
   font-size: #{scaleValue(24)};
 background: linear-gradient(rgb(255, 228, 228) 25%, palegreen 60%, #fff);
 @media (max-width:600px) {
-font-size:2rem;
+font-size:5rem;
 }
 
  }
