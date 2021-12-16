@@ -79,7 +79,7 @@ export default {
  
     const slideReveal = document.querySelectorAll(".slide-reveal");
     slideReveal.forEach((slide, index, slideReveal) => {
-       gsap.defaults({duration:  .5});
+       gsap.defaults({duration:  .5, });
         const img = slide.querySelector("img");
         console.log(img)
            const revealText = slide.querySelector(".reveal-text");
@@ -114,7 +114,7 @@ export default {
           //pin animation
           const tl = gsap.timeline();
           tl.to(slide, {
-            opacity: 0,
+            autoAlpha: 0,
             delay: 0.5,
             scale: 0.8,
             // y: -100,
@@ -147,7 +147,7 @@ export default {
         "(max-width:800px)": function () {
           const tl = gsap.timeline();
           tl.to(slide, {
-            opacity: 0,
+            autoAlpha: 0,
             delay: 0.5,
             scale: 0.5,
           });
@@ -204,6 +204,7 @@ unmounted() {
   display: flex;
   justify-content: center;
   align-items: center;
+   line-height: 1.55;
    
   height: 100vh;
   // min-height: 100vh;
@@ -221,6 +222,7 @@ unmounted() {
   align-items: center;
   height: 100vh;
   margin: 0;
+    line-height: 1.55;
   background: rgb(30, 30, 32);
    @include respond(tab-port) {
     flex-direction: column;

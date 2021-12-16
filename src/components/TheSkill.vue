@@ -111,6 +111,11 @@ h2 {
  pointer-events: none;
   
  width: #{scaleValue(24)};
+
+ @include respond(tab-port) {
+   margin-right: .5rem;
+   width: #{scaleValue(40)};
+ }
 }
 .rotation {
   transform: rotate(180deg);
@@ -162,6 +167,15 @@ h2 {
     border: none;
   }
 }
+// animation for summary
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
 details > summary {
   list-style: none;
 }
@@ -184,6 +198,7 @@ details[open] > summary {
 details[open] > p {
   color: rgba($color-black, .6);
   height: 33%;
+  line-height: 1.75;
   font-size: #{scaleValue(20)};
   @include respond(tab-port) {
     font-size: 1.5rem;

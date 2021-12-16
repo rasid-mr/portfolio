@@ -45,7 +45,7 @@
        
       </ul>
       <div class="header_contact">
-        <h1 class="big">Stay in touch.</h1>
+        <h1 class="big"><span> !! </span>Loose Yourself <span> !! </span></h1>
         <p>
            
         </p>
@@ -65,6 +65,7 @@ export default {
     }
   },
   mounted() {
+     
     
     // const header = document.querySelector('.the-header');
     const skill = document.querySelector('.parent-Container')
@@ -140,7 +141,7 @@ hideNav() {
   align-items: center;
   justify-content: space-between;
   color: white;
-  background: blanchedalmond;
+  background: #ebebeb;
   width: 100%;
   padding: 2rem #{scaleValue(80)};
   z-index: 2;
@@ -172,11 +173,18 @@ hideNav() {
   display: flex;
   flex-flow: column nowrap;
   font-size: 3rem;
+  @include respond(tab-port){
+    font-size: 2.5rem;
+
+  }
   & > * {
     flex: 1 1 8rem;
      align-self: center;
      display: flex;
      align-items: center;
+     @include respond(tab-port){
+       flex: 1 1 6rem;
+     }    
      
   }
 }
@@ -218,7 +226,7 @@ body.hide {
 }
 .logo {
   width: 10rem;
-  fill: orangered;
+  fill: $color-primary-pink;
 }
  .sticky {
    position: sticky;
@@ -226,4 +234,12 @@ body.hide {
    top: 0;
    z-index: 20000;
  }
+ 
+
+ 
+
+span {
+  color: $color-primary-pink;
+}
+ 
 </style>

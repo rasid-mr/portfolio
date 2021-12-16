@@ -34,7 +34,7 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: #e7e7e7;
-     
+  
   margin: 0;
   @include respond(big-desktop) {
      margin: 0 20rem;
@@ -140,12 +140,12 @@ body::-webkit-scrollbar-thumb {
 
 
 .page-enter-active {
-  animation: acrossIn .45s ease-out both;
+  animation: acrossIn .35s ease-out both;
   animation-delay: 1s;
 } 
 
 .page-leave-active {
-  animation: acrossOut .65s ease-in both;
+  animation: acrossOut .45s ease-in both;
    animation-delay: 1s;
 } 
 

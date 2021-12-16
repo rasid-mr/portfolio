@@ -1,13 +1,90 @@
 <template>
- 
-    <div class="footer">
-      <div>
-<h2 class="big">Get in touch</h2>
+  <div class="footer">
+    <div class="footer_hey">
+      <svg
+        version="1.1"
+        class="hey"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 626 213.7"
+        style="enable-background: new 0 0 626 213.7"
+        xml:space="preserve"
+      >
+        <linearGradient
+          id="SVGID_1_"
+          gradientUnits="userSpaceOnUse"
+          x1="-0.5739"
+          y1="1629.8821"
+          x2="616.2745"
+          y2="1629.8821"
+          gradientTransform="matrix(1 0 0 1 0 -1506)"
+        >
+          <stop offset="0" style="stop-color: #2d6dd0" />
+          <stop offset="0.99" style="stop-color: #6c139c" />
+        </linearGradient>
+        <path
+          class="stt0"
+          d="M606.7,34.1h-32.4c-2.4,0.2-4.9,0.9-6.9,2.3c-2,1.5-3.7,3.4-4.6,5.8l-7.5,21.1l-5.8,16.4l-8.3,23.7
+	c-0.9,2.8-2,5.7-3.5,8.1c-1.5-2.6-2.6-5.3-3.5-8.3l-7.8-23.5c-1.5-4.6-4.1-11.9-5.8-16.5l-7.2-20.9c-0.9-2.3-2.4-4.3-4.6-5.8
+	c-2-1.5-4.4-2.3-7-2.3H377.3c-1.2,0-2.3,0.2-3.4,0.6c-1.1,0.5-2,1.1-2.8,1.8c-0.8,0.8-1.5,1.8-1.8,2.8c-0.5,1.1-0.6,2.1-0.6,3.4V92
+	c0,2.3-0.9,4.6-2.6,6.1c-1.7,1.7-3.8,2.6-6.1,2.6H324c-2.3,0-4.6-0.9-6.1-2.6c-1.7-1.7-2.6-3.8-2.6-6.1V42.8c0-2.1-0.9-4.4-2.4-6
+	c-1.5-1.7-3.7-2.6-5.8-2.6h-30.1c-2.3,0-4.6,0.9-6.1,2.4c-1.7,1.7-2.6,3.8-2.6,6.1v22.8c16,20.5,16,57.5,0,112.8v26.3
+	c0,2.3,0.9,4.6,2.6,6.1c1.7,1.7,3.8,2.4,6.1,2.4H307c1.2,0,2.3-0.2,3.4-0.6c1.1-0.5,2-1.1,2.8-1.8c0.8-0.8,1.5-1.8,1.8-2.8
+	c0.5-1.1,0.6-2.1,0.6-3.4l0,0v-53.8c0-2.3,0.9-4.4,2.4-6c1.5-1.5,3.7-2.6,6-2.6h36.1c2.3,0,4.6,0.9,6.1,2.4c1.7,1.7,2.6,3.8,2.6,6.1
+	l0,0v53.8c0,2.3,0.9,4.4,2.4,6.1c1.7,1.7,3.8,2.4,6.1,2.4h101.5c2.3,0,4.4-0.9,6.1-2.4c1.7-1.7,2.4-3.8,2.4-6.1v-22.3
+	c0-2.3-0.9-4.4-2.4-6.1c-1.7-1.7-3.8-2.4-6.1-2.4H425c-2.3,0-4.6-0.9-6.1-2.6c-1.7-1.7-2.4-3.8-2.4-6.1v-14.7c0-2.3,0.9-4.6,2.4-6.1
+	c1.7-1.7,3.8-2.6,6.1-2.6h32.5c2.3,0,4.4-0.9,6.1-2.4c1.7-1.7,2.6-3.8,2.6-6.1l0,0v-22.5c0-2.3-0.9-4.4-2.6-6.1
+	c-1.7-1.7-3.8-2.4-6.1-2.4H425c-2.3,0-4.6-0.9-6.1-2.6c-1.7-1.7-2.4-3.8-2.4-6.1V82.7c0-2.3,0.9-4.6,2.4-6.1
+	c1.7-1.7,3.8-2.6,6.1-2.6l0,0h44c2.6,0.2,5,0.9,7.2,2.3c2.1,1.4,4,3.4,5,5.7l28.6,62c2.3,5.2,3.5,10.8,3.7,16.7v44.5
+	c0,2.3,0.9,4.4,2.4,6.1c1.7,1.7,3.8,2.4,6.1,2.4h30.3c2.3,0,4.6-0.9,6.1-2.4c1.7-1.7,2.6-3.8,2.6-6.1l0,0v-44.5
+	c0.2-5.7,1.4-11.3,3.5-16.7l47.1-101.8c0.5-0.8,0.8-1.8,0.8-2.8c0-1.1-0.3-2-0.8-2.8c-0.6-0.8-1.4-1.5-2.1-2
+	C608.5,34.1,607.6,34,606.7,34.1L606.7,34.1z"
+        />
+        <linearGradient
+          id="SVGID_2_"
+          gradientUnits="userSpaceOnUse"
+          x1="92376.9609"
+          y1="1629.8821"
+          x2="192892.0938"
+          y2="1629.8821"
+          gradientTransform="matrix(1 0 0 1 0 -1506)"
+        >
+          <stop offset="0" style="stop-color: #2d6dd0" />
+          <stop offset="0.99" style="stop-color: #6c139c" />
+        </linearGradient>
+        <path
+          class="stt1 heynew"
+          d="M220.4,84.2c-7.5,2-14.4,6.1-19.8,11.8c-6.3-22.1-19.8-55.5-33-61c-1.4-0.7-2.9-1-4.5-0.9
+	c-1.5,0.1-3,0.5-4.4,1.3c-8.2,4.8-13.6,20.3-8.9,49.5c-18.2-33.2-24.5-33.1-27.4-33.2c-1.4,0-2.8,0.5-3.9,1.3
+	c-1.2,0.8-2.1,1.9-2.6,3.2c-2,4.4-5.9,18,3.7,47.3c-11.7-15.8-15.2-17.8-19.3-17.6c-1.3,0.1-2.6,0.5-3.7,1.3
+	c-1.1,0.7-1.9,1.7-2.5,2.9c-3.5,6.5-3.1,23,7.7,47.4c-3.7-3.3-8.4-5.2-13.3-5.5c-1.3,0.1-2.6,0.5-3.7,1.2s-2,1.7-2.7,2.9
+	c-4.4,8,4.8,30.5,16.1,45.8c9.2,12.5,27.6,31.8,54.3,31.8c3.8,0,7.5-0.4,11.2-1.1c1.3-0.2,2.4-1,3.2-2c0.8-1.1,1-2.4,0.8-3.7
+	s-1-2.4-2-3.2c-1.1-0.8-2.4-1-3.7-0.8c-0.1,0-0.1,0-0.2,0c-22.2,4.3-38.9-7.9-49-18.8c-15.1-16.3-21.7-36-22.1-41.9
+	c3.2,1.3,12.3,6.7,30.1,29.4c0.8,1.1,1.9,1.7,3.2,2c1.3,0.2,2.6-0.1,3.6-0.9c1.1-0.8,1.7-1.9,2-3.2c0.2-1.3-0.1-2.6-0.9-3.6l0,0
+	c-25-37.8-27.4-60.8-26.6-68.5c7.3,7.5,25.7,34.9,39.5,55.7c0.7,1.1,1.8,1.8,3,2.1c1.2,0.3,2.5,0.1,3.6-0.6s1.9-1.7,2.2-2.9
+	c0.3-1.2,0.2-2.5-0.4-3.6c-28.9-52.9-27.8-76.9-26.2-84.9c4.3,4.4,15.8,19.6,39.9,72c0.5,1.1,1.5,2,2.7,2.5s2.5,0.4,3.6,0
+	c1.2-0.5,2.1-1.4,2.6-2.5c0.5-1.2,0.6-2.4,0.1-3.6c-23.3-63.8-13.2-85.3-9.3-87.8c5,0,19.2,24.3,28,56.1c0.5,2,1.1,3.9,1.5,5.8
+	c-1.3,2.2-2.2,4.5-2.9,6.9c-4.8,17.6-9.6,57.6-0.3,68.6c0.9,1.2,2.1,2.1,3.5,2.6c1.3,0.6,2.8,0.8,4.3,0.7c1.9-0.2,3.7-0.8,5.2-1.8
+	s3-2.3,4-3.9c8.6-12.5,3.6-44-3.3-71.5c4.7-6.6,11.4-11.5,19.2-13.8c1.6-0.5,3.4-0.6,5.1-0.2c1.7,0.4,3.2,1.3,4.5,2.5
+	c3.9,4.4,10.8,20.9-10,79.2c-0.2,0.6-0.3,1.3-0.3,1.9c0,0.6,0.2,1.3,0.5,1.8c0.6,1.2,1.5,2.1,2.8,2.5c1.2,0.4,2.6,0.4,3.8-0.2
+	s2.1-1.5,2.5-2.8c16.6-46.4,19.2-76.3,8.1-88.9c-2.4-2.6-5.5-4.4-8.9-5.3C227.3,83.1,223.7,83.2,220.4,84.2L220.4,84.2z
+	 M198.8,173.4c-0.4,0.7-1,1.2-1.6,1.4c-3.6-4.3-3.6-29.6,0.3-50.3C204.9,160.3,200.6,170.8,198.8,173.4L198.8,173.4z"
+        />
+      </svg>
+
+      <h2 class="big stay">STAY CONNECTED</h2>
+    </div>
+    <div class="about">
+      <div class="stay-connected">
+ <router-link class="stay-connected-router about-me" to="./about">About me</router-link>
       </div>
-      
      
-      <div class="contact-social">
-      <primary-button class="mailTo" @click="mailTo">Mail Me</primary-button>
+    </div>
+    <div class="contact-social">
+      <primary-button class="mailTo" @click="mailTo">Contact me</primary-button>
       <div class="social">
         <a href="https://www.facebook.com/mohtasim.hasan.35">
           <svg
@@ -36,14 +113,46 @@
         </a>
       </div>
     </div>
-       </div>
+  </div>
 </template>
+
 <script>
 import primaryButton from "../Layout/primary-button.vue";
+import { gsap } from "gsap";
+
 export default {
   data: () => ({ value: "recent" }),
   components: {
     primaryButton,
+  },
+  mounted() {
+    const { hey } = this.$refs;
+
+    const heynew = document.querySelector(".heynew");
+
+    const tlhey = gsap.timeline();
+
+    tlhey.fromTo(
+      heynew,
+      {
+        xPercent: 20,
+        duration: 1,
+        rotation: 20,
+        repeat: -1,
+        ease: "power1.out",
+        transformOrigin: "left bottom",
+        yoyo: true,
+      },
+      {
+        xPercent: -20,
+        duration: 1,
+        rotation: -5,
+        repeat: -1,
+        ease: "power1.out",
+        transformOrigin: "left bottom",
+        yoyo: true,
+      }
+    );
   },
   methods: {
     mailTo() {
@@ -53,10 +162,40 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.stt0 {
+  fill: url(#SVGID_1_);
+}
+.stt1 {
+  fill: $color-primary-pink;
+}
+.stay {
+  padding-top: #{scaleValue(20)};
+}
+.hey {
+  max-width: 16rem;
+  width: #{scaleValue(180)};
+
+  margin-right: #{scaleValue(25)};
+}
+.footer_hey {
+  display: flex;
+  min-height: 3rem;
+  margin-top: #{scaleValue(50)};
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 .footer {
-  height: #{scaleValue(295)};
-  background: rgb(11,6,8);
-  background: radial-gradient(circle, rgba(11,6,8,1) 7%, rgba(40,40,40,1) 25%, rgba(0,0,0,1) 100%);
+   min-height: 350px;
+  height: #{scaleValue(495)};
+ 
+  background: rgb(11, 6, 8);
+  background: radial-gradient(
+    circle,
+    rgba(11, 6, 8, 1) 7%,
+    rgba(40, 40, 40, 1) 25%,
+    rgba(0, 0, 0, 1) 100%
+  );
   color: $color-primary-pink;
   // display: grid;
   // grid-template-rows: repeat(2, 1fr);
@@ -64,32 +203,28 @@ export default {
   // grid-auto-flow: column;
   display: flex;
   flex-flow: column;
+   justify-content: center;
   @include respond(phone) {
     height: #{scaleValue(600)};
   }
-
-  
 }
 .mailTo {
-  margin-left: #{scaleValue(80)};
+  margin-right: #{scaleValue(15)};
   // width: max-content;
   white-space: nowrap;
-   
+  cursor: pointer;
+  font-size: #{scaleValue(36)};
 }
-h2 {
-  margin-left: #{scaleValue(80)};
-  padding-top: 2rem;
 
-
-}
 .contact-social {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 3rem;
 }
-svg {
-  fill: $color-primary-cyan;
-   
+.ionicon {
+  fill: url(#SVGID_1_);
+
   width: 5rem;
   @include respond(tab-port) {
     width: 4rem;
@@ -100,6 +235,42 @@ svg {
   margin: 0 1rem;
   cursor: pointer;
 }
- 
 
+.stay-connected-router,
+.stay-connected-router:visited {
+    background: linear-gradient(to left,#6c139c, #3d6dd0);
+    background: -webkit-linear-gradient(to left,#6c139c, #2d6dd0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   font-weight: 600;
+   padding: #{scaleValue(5)} 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor:pointer;
+    outline: 2px solid $color-primary-pink;
+    border-radius: 3px;
+    outline-offset: -20px 10px;
+    
+ 
+    transition: opacity .2s;
+    &:hover {
+      opacity: .6;
+    }
+    
+}
+ 
+ .stay-connected {
+   width: 14%;
+ }
+ .about {
+   display: flex;
+   margin-top: #{scaleValue(20)};
+   justify-content: center;
+
+   &-me {
+     font-size: #{scaleValue(40)};
+   }
+ }
 </style>

@@ -6,10 +6,10 @@
  
 <style lang="scss" scoped>
 .btn-primary {
-  background-color: $color-primary-violet;
+  background-color: #f8596d;
   border-radius: 0.4rem;
   font-size: #{scaleValue(25)};
-  color: $color-white;
+  color:#ebebeb;
   cursor: pointer;
   outline: none;
   border: none;
@@ -19,7 +19,7 @@
   font-weight: 600;
   width: max-content;
   @include respond(phone) {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   &:hover {

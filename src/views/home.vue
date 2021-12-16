@@ -11,8 +11,31 @@
         <span class="hero_header-hey highlight"> Hey there, </span>
         I am Sumon, I am a front end developer.
       </h1>
-
+      <div class="contact-paperRocket">
       <primary-button @click="mailTo" ref="contact" class="hero_contact"> contact me </primary-button>
+     <svg version="1.1" id="Layer_1" ref="paperRocket" class="paper-rocket" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150.8 122.1" style="enable-background:new 0 0 150.8 122.1;" xml:space="preserve">
+ 
+<path class="stt0" d="M146.9,30.5l-139-30L6.1,0.1C3.4-0.5,0.7,1.2,0.1,3.9C-0.1,5,0,6.2,0.5,7.2l55.2,112.1c0.7,1.5,2.1,2.5,3.7,2.7
+	c1.6,0.3,3.3-0.3,4.4-1.5l38.3-40.4c0.6-0.6,1.3-0.9,2.1-0.9c1.1,0,2.1,0.6,2.7,1.6l7.9,14.5c1,2,3.3,3,5.5,2.5l0,0
+	c2.2-0.5,3.8-2.4,3.9-4.6l1.6-33.5c0-0.4,0.1-0.8,0.3-1.2c0.2-0.4,0.5-0.7,0.8-1L149,39.3c2.1-1.8,2.4-4.9,0.7-7
+	C149,31.3,148,30.7,146.9,30.5L146.9,30.5z M147.8,37.7l-22.1,18.2c-0.3,0.2-0.5,0.5-0.8,0.8L7.6,3.5c-0.1,0-0.2-0.1-0.3-0.1
+	C6.2,3.1,5.1,3.7,4.9,4.8C4.7,5.6,5,6.5,5.6,6.9L102,77.7c-0.5,0.3-0.9,0.6-1.3,1l-38.3,40.4c-1.1,1.2-3,1.2-4.2,0.1
+	c-0.3-0.2-0.5-0.5-0.6-0.8L2.3,6.3C1.6,4.8,2.2,3,3.7,2.3C4.3,2,5,1.9,5.6,2.1l1.8,0.4l139,30c1.6,0.4,2.7,2,2.3,3.6
+	C148.6,36.7,148.3,37.3,147.8,37.7L147.8,37.7z"/>
+<path class="stt1" d="M146.9,30.5l-139-30L6.1,0.1C3.4-0.5,0.7,1.2,0.1,3.9C-0.1,5,0,6.2,0.5,7.2l55.2,112.1c0.7,1.5,2.1,2.5,3.7,2.7
+	c1.6,0.3,3.3-0.3,4.4-1.5l38.3-40.4c0.6-0.6,1.3-0.9,2.1-0.9c1.1,0,2.1,0.6,2.7,1.6l7.9,14.5c1,2,3.3,3,5.5,2.5l0,0
+	c2.2-0.5,3.8-2.4,3.9-4.6l1.6-33.5c0-0.4,0.1-0.8,0.3-1.2c0.2-0.4,0.5-0.7,0.8-1L149,39.3c2.1-1.8,2.4-4.9,0.7-7
+	C149,31.3,148,30.7,146.9,30.5L146.9,30.5z M147.8,37.7l-22.1,18.2c-0.3,0.2-0.5,0.5-0.8,0.8c-0.2,0.3-0.4,0.5-0.5,0.8
+	c-0.2,0.3-0.3,0.6-0.4,1l0,0c-0.1,0.3-0.1,0.7-0.2,1L122.2,93c0,1.4-1,2.5-2.3,2.8l0,0c-1.3,0.3-2.7-0.3-3.3-1.5l-7.9-14.5
+	c-0.8-1.5-2.4-2.5-4.1-2.6l0,0c-0.1,0-0.2,0-0.3,0c-0.8,0-1.6,0.2-2.3,0.6c-0.5,0.3-0.9,0.6-1.3,1l-38.3,40.4
+	c-1.1,1.2-3,1.2-4.2,0.1c-0.3-0.2-0.5-0.5-0.6-0.8L2.3,6.3C1.6,4.8,2.2,3,3.7,2.3C4.3,2,5,1.9,5.6,2.1l1.8,0.4l139,30
+	c1.6,0.4,2.7,2,2.3,3.6C148.6,36.7,148.3,37.3,147.8,37.7L147.8,37.7z"/>
+<path class="stt1" d="M125.3,56.9l-0.8,1.8l-0.5-0.2l0,0L6.8,5.3l97.8,71.9l0,0l0.3,0.2l-1.2,1.6l-1.7-1.3L5.6,6.9
+	C4.7,6.3,4.5,5,5.2,4.1c0.5-0.7,1.3-1,2.1-0.8c0.1,0,0.2,0.1,0.3,0.1l117.2,53.2L125.3,56.9z"/>
+</svg>
+
+      </div>
     </div>
    
  <div>
@@ -4847,14 +4870,16 @@ export default {
     // header animation 
     const headerTimeline = gsap.timeline()
     const {header} = this.$refs;
+    const {paperRocket} = this.$refs;
     // const {contact} = this.$refs;
+
     const contact = document.querySelector('.hero_contact')
      headerTimeline.from(header, {
           duration:1,
-          opacity:0,
-          x:-200,
+          opacity:.3,
+          x:-150,
           delay:.2,
-          ease:"back.out"
+          ease:"power.out"
      })
 
      headerTimeline.from(contact, {
@@ -4862,9 +4887,16 @@ export default {
        opacity:0,
        yPercent:-100,
        delay:.2,
-      ease:"back.out"
-     }, '-=.5')
-
+      ease:"power.out"
+     }, '-=.3')
+    headerTimeline.from(paperRocket, {
+      duration:1,
+      opacity:0,
+      x:50,
+      delay:.2,
+       
+      ease:"power.out"
+    },'-=.5')
 
 
     console.log(document.querySelector('.wrapping'));
@@ -5400,7 +5432,22 @@ export default {
  
 
 //  svg id visual
- 
+.contact-paperRocket {
+  
+  display:flex;
+   align-items:flex-end;
+  
+}
+ .paper-rocket {
+   width:#{scaleValue(57)};
+   @include respond(tab-port) {
+     width:#{scaleValue(80)}
+   }
+      @include respond(phone) {
+     width:#{scaleValue(115)}
+   }
+   margin-left:2rem;
+ }
 .parent-Container {
   display: grid;
   grid-auto-flow: column;
@@ -5408,7 +5455,7 @@ export default {
   min-height: 650px;
   grid-template-columns:#{scaleValue(545)} #{scaleValue(893)} ;
   overflow: hidden;
-  background: url("../assets/Frame.png");
+  background: url("../assets/frame.svg");
   background-position: left 100%;
   background-origin: padding-box;
   background-size: 100%;
@@ -5419,7 +5466,7 @@ export default {
   @include respond(tab-port) {
     height: 140vh;
     min-height: 950px;
-    background: url("../assets/Frame.png"), url("../assets/frame-tab.png");
+    background: url("../assets/frame.svg"), url("../assets/frame-tab.png");
     background-size:140%, 100% ;
     background-size: cover, cover;
     background-position: left bottom, top right;
@@ -5433,7 +5480,7 @@ export default {
    
   @include respond(phone) {
     height: 100vh;
-    background: url("../assets/Frame.png"), url("../assets/frame-tab.png");
+    background: url("../assets/frame.svg"), url("../assets/frame-tab.png");
     background-size:140%, 100% ;
     background-position: left bottom, top right;
     background-size: cover, contain;
@@ -5560,6 +5607,9 @@ export default {
 .parents > * {
   opacity: 0;
 }
+
+		.stt0{fill:#6C63FF;}
+	.stt1{fill:#3F3D56;}
 
 .st0 {
   fill: #6c63ff;
