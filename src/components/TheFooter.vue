@@ -79,9 +79,10 @@
     </div>
     <div class="about">
       <div class="stay-connected">
- <router-link class="stay-connected-router about-me" to="./about">About me</router-link>
+        <router-link class="stay-connected-router about-me" to="./about"
+          >About me</router-link
+        >
       </div>
-     
     </div>
     <div class="contact-social">
       <primary-button class="mailTo" @click="mailTo">Contact me</primary-button>
@@ -169,7 +170,15 @@ export default {
   fill: $color-primary-pink;
 }
 .stay {
-  padding-top: #{scaleValue(20)};
+  margin-bottom: #{scaleValue(30)};
+  // align-self: flex-end;
+
+  @include respond(tab-port) {
+    padding-top: #{scaleValue(30)};
+  }
+  @media (min-width: 400px) {
+    padding-top: #{scaleValue(40)};
+  }
 }
 .hey {
   max-width: 16rem;
@@ -184,11 +193,12 @@ export default {
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin: 0;
 }
 .footer {
-   min-height: 350px;
+  min-height: 350px;
   height: #{scaleValue(495)};
- 
+
   background: rgb(11, 6, 8);
   background: radial-gradient(
     circle,
@@ -203,7 +213,17 @@ export default {
   // grid-auto-flow: column;
   display: flex;
   flex-flow: column;
-   justify-content: center;
+  justify-content: center;
+  @include respond(phone) {
+    min-height: 220px;
+  }
+  & > * {
+    flex-basis: 21%;
+
+    @include respond(tab-port) {
+      flex-basis: 15%;
+    }
+  }
   @include respond(phone) {
     height: #{scaleValue(600)};
   }
@@ -220,7 +240,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+
+  margin: 0;
 }
 .ionicon {
   fill: url(#SVGID_1_);
@@ -238,39 +259,47 @@ export default {
 
 .stay-connected-router,
 .stay-connected-router:visited {
-    background: linear-gradient(to left,#6c139c, #3d6dd0);
-    background: -webkit-linear-gradient(to left,#6c139c, #2d6dd0);
+  background: linear-gradient(to left, #6c139c, #3d6dd0);
+  background: -webkit-linear-gradient(to left, #6c139c, #2d6dd0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   font-weight: 600;
-   padding: #{scaleValue(5)} 0;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    white-space: nowrap;
-    cursor:pointer;
-    outline: 2px solid $color-primary-pink;
-    border-radius: 3px;
-    outline-offset: -20px 10px;
-    
- 
-    transition: opacity .2s;
-    &:hover {
-      opacity: .6;
-    }
-    
-}
- 
- .stay-connected {
-   width: 14%;
- }
- .about {
-   display: flex;
-   margin-top: #{scaleValue(20)};
-   justify-content: center;
+  font-weight: 600;
+  padding: #{scaleValue(5)} 0;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: 2px solid $color-primary-pink;
+  border-radius: 3px;
+  outline-offset: -20px 10px;
 
-   &-me {
-     font-size: #{scaleValue(40)};
-   }
- }
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.stay-connected {
+  width: 14%;
+  @include respond(phone) {
+    width: 17%;
+  }
+}
+.about {
+  display: flex;
+  margin-top: #{scaleValue(20)};
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  
+  &-me {
+    font-size: #{scaleValue(40)};
+
+    @include respond(phone) {
+      font-size: #{scaleValue(50)};
+    }
+  }
+  
+}
 </style>
