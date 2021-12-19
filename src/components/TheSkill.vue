@@ -71,24 +71,6 @@
 import {gsap} from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger'
 export default {
-  mounted() {
-    // const {skillStory} = this.$refs;
-    // const skillStory = document.querySelector('.skill')
-    // gsap.registerPlugin(ScrollTrigger)
-
-    // const skillStoryTimeline = gsap.timeline();
-    // skillStoryTimeline.from(skillStory, {
-    //   opacity:0,
-    //   duration:1,
-    //   // yPercent:30,
-    //   y:200,
-    //   delay:1,
-    //   ease:"back.out"
-  
-    // })
-
-
-  },
   methods: {
     arrowChange(e) {
       if(e.srcElement.childNodes) { e.srcElement.childNodes[1].classList.toggle('rotation')}
@@ -99,8 +81,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ 
 h2 {
-  // text-decoration:;
+ 
   font-weight: bold;
 }
 .transitionArrow {
@@ -144,18 +127,24 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   min-height: 650px;
   height: 100vh;
-
   @include respond(tab-port) {
+ grid-auto-columns: 1fr;
+    grid-template-rows: minmax(480px, 80vh) 15vh;
+    height: 95vh;
+     min-height: 650px;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+  }
+  @include respond(phone) {
     grid-auto-columns: 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 70vh 15vh;
     height: 85vh;
+     min-height: 650px;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
 
   }
-  @include respond(phone) {
-    height: 60vh;
-  }
+ 
 
   
   padding: 0 #{scaleValue(80)};
@@ -198,7 +187,7 @@ details[open] > summary {
 details[open] > p {
   color: rgba($color-black, .6);
   height: 33%;
-  line-height: 1.75;
+  line-height: 1.7;
   font-size: #{scaleValue(20)};
   @include respond(tab-port) {
     font-size: 1.5rem;
@@ -227,7 +216,10 @@ summary {
    box-shadow: 0 2px 2px rgba(#000, .1),
       0 4px 4px rgba(#000, .1),
       0 6px 6px rgba(#000, .1);
-   
+   @include respond(phone) {
+     box-shadow: 0 2px 2px rgba(#000, .1),
+     0 4px 4px rgba(#000, 0.1)
+   }
 }
  
  
@@ -238,8 +230,12 @@ summary {
 .composition {
   position: relative;
 
-  height: 100%;
+  min-height: 100vh;
+  // min-height: 100%;
   
+  @include respond(tab-port) {
+    min-height: 30vh;
+  }
   
   
 

@@ -176,7 +176,7 @@ export default {
 }
 .stay {
   margin-bottom: #{scaleValue(20)};
-  // align-self: flex-start;
+  
   font-weight: 600;
 
   @include respond(tab-port) {
@@ -236,10 +236,10 @@ export default {
 }
 .mailTo {
   margin-right: #{scaleValue(15)};
-  // width: max-content;
+  
   white-space: nowrap;
   cursor: pointer;
-  // font-size: #{scaleValue(36)};
+   
 }
 
 .contact-social {
@@ -250,7 +250,8 @@ export default {
   margin: 0;
 }
 .ionicon {
-  fill: url(#SVGID_1_);
+  // fill: url(#SVGID_1_);
+  fill:$color-primary-pink;
 
   width: 5rem;
   @include respond(tab-port) {
@@ -265,10 +266,7 @@ export default {
 
 .stay-connected-router,
 .stay-connected-router:visited {
-  // background: linear-gradient(to left, #6c139c, #3d6dd0);
-  // background: -webkit-linear-gradient(to left, #6c139c, #2d6dd0);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
+ 
   color: rgb(235, 235, 235);
   font-weight: 600;
   padding: #{scaleValue(5)} 0;
@@ -276,14 +274,33 @@ export default {
   justify-content: center;
   text-decoration: none;
   white-space: nowrap;
-  cursor: pointer;
-  outline: 2px solid $color-primary-pink;
-  border-radius: 3px;
-  outline-offset: -20px 10px;
+  text-decoration: none;
+  color: $color-primary-pink;
+  display: inline-block;
+  position: relative;
+  padding: 0 0.23rem 0.2rem;
+  isolation: isolate;
 
-  transition: opacity 0.2s;
-  &:hover {
-    opacity: 0.6;
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 100%;
+    background-color: currentcolor;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: scaley(0.05);
+    transition: transform 0.25s;
+    content: "";
+  }
+  &:hover,
+  &:focus {
+    &::after {
+      transform: none;
+      
+    }
   }
 }
 

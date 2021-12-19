@@ -194,13 +194,12 @@ export default {
   line-height: 1.55;
 
   height: 100vh;
-  // min-height: 100vh;
-  // min-height: -webkit-fill-abailable;
+ 
   background: rgb(30, 30, 32);
   margin-bottom: #{scaleValue(170)};
   @include respond(tab-port) {
     flex-direction: column;
-    // height: 70vh;
+     
     margin-bottom: #{scaleValue(530)};
   }
 }

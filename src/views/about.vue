@@ -52,9 +52,7 @@ export default {};
 
 <style lang="scss" scoped>
 .app {
-  // margin-top: #{scaleValue(107)};
-  // height: calc(100vh - #{scaleValue(107)});
-  // overflow: hidden;
+ 
   padding: 0 #{scaleValue(80)};
   color: $color-primary-pink;
   overflow: hidden;
@@ -93,10 +91,7 @@ img {
   }
 }
 .about {
-  //    display: grid;
-  //    grid-auto-flow: column;
-  // grid-template-columns:#{scaleValue(545)} #{scaleValue(893)} ;
-  // grid-template-rows: calc(100vh- #{scaleValue(107)});
+  
   margin-top: 5rem;
  
 }
