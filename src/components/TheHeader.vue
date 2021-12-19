@@ -78,10 +78,10 @@ export default {
     // const header = this.$refs.header;
     const header = document.querySelector('.the-header')
     // const skill = this.$refs.skill;
-    console.log(header, skill, 'skill')
+    // console.log(header, skill, 'skill')
     const stickyNav  = function(entries) {
       const [entry] = entries;
-      console.log(entry)
+      // console.log(entry)
       if(!entry.isIntersecting) { header.classList.add('sticky')}
       else{header.classList.remove('sticky')}
     }
@@ -133,7 +133,7 @@ hideNav() {
    },
    unmounted() {
      this.observer.disconnect()
-     console.log('destroy')
+    
    },
 };
 </script>

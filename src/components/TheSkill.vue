@@ -4,10 +4,20 @@
       <h2 class="medium">A quality Website can bring opportunities for you</h2>
 
       <details open>
-        <summary @click="arrowChange" >   HTML, CSS, JAVASCRIPT 
-         
-          <svg class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-        
+        <summary @click="arrowChange">
+          HTML, CSS, JAVASCRIPT
+
+          <svg
+            class="arrow transitionArrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+            />
+          </svg>
         </summary>
         <p>
           I learned HTML in my college days. Seeing the hello world in the
@@ -17,10 +27,21 @@
         </p>
       </details>
       <details open>
-        <summary  @click="arrowChange">   VUE.JS 
-      
-          <svg    class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-        </summary> 
+        <summary @click="arrowChange">
+          VUE.JS
+
+          <svg
+            class="arrow transitionArrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+            />
+          </svg>
+        </summary>
         <p>
           Vue.js is one of the most famous javascript framework right now. It
           has 189k stars in github right now and it's growing so fast. It is a
@@ -29,10 +50,20 @@
         </p>
       </details>
       <details open>
-        <summary  @click="arrowChange">   SIGNLE PAGE APP(SPA)
-       
-          <svg class="arrow transitionArrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-         
+        <summary @click="arrowChange">
+          SIGNLE PAGE APP(SPA)
+
+          <svg
+            class="arrow transitionArrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+            />
+          </svg>
         </summary>
         <p>
           Due to the covid-19 pandemic, everything is going online from offline.
@@ -45,21 +76,32 @@
     <div class="skill_image">
       <div class="composition">
         <img
-         
           class="composition_photo-one composition_photo"
-          src="../assets/roman-kraft-WOzVqzpScrk-unsplash.jpg"
+          srcset="
+            ../assets/hand-art-phone.jpg  320w,
+            ../assets/hand-art.jpg       1920w
+          "
+          sizes="(max-width: 56.25em) 25vw, (max-width: 37.5em) 25vw, 350px"
+          src="../assets/hand-art.jpg"
           alt="Nothing is impossible"
         />
 
-        <img  
+        <img
           class="composition_photo-two composition_photo"
-          src="../assets/tamara-gore-jfH6tHXvXlg-unsplash.jpg"
+          srcset="
+            ../assets/table-computer-phone.jpg  320w,
+            ../assets/table-computer.jpg       1920w
+          "
+          sizes="(max-width: 56.25em) 25vw, (max-width: 37.5em) 25vw, 350px"
+          src="../assets/table-computer.jpg"
           alt="Life has got all those twists and turns"
         />
 
-        <img 
+        <img
           class="composition_photo-three composition_photo"
-          src="../assets/christopher-gower-m_HRfLhgABo-unsplash.jpg"
+          srcset="../assets/do-what-phone.jpg 320w, ../assets/do-what.jpg 1920w"
+          sizes="(max-width: 56.25em) 25vw, (max-width: 37.5em) 25vw, 350px"
+          src="../assets/do-what.jpg"
           alt="Friendship is another word for love"
         />
       </div>
@@ -68,50 +110,46 @@
 </template>
 
 <script>
-import {gsap} from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 export default {
   methods: {
     arrowChange(e) {
-      if(e.srcElement.childNodes) { e.srcElement.childNodes[1].classList.toggle('rotation')}
-    }
-
+      if (e.srcElement.childNodes) {
+        e.srcElement.childNodes[1].classList.toggle("rotation");
+      }
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
- 
 h2 {
- 
   font-weight: bold;
 }
 .transitionArrow {
-     transition: transform .3s;
+  transition: transform 0.3s;
 }
 .arrow {
- fill: $color-primary-pink;
- pointer-events: none;
-  
- width: #{scaleValue(24)};
+  fill: $color-primary-pink;
+  pointer-events: none;
 
- @include respond(tab-port) {
-   margin-right: .5rem;
-   width: #{scaleValue(40)};
- }
+  width: #{scaleValue(24)};
+
+  @include respond(tab-port) {
+    margin-right: 0.5rem;
+    width: #{scaleValue(40)};
+  }
 }
 .rotation {
   transform: rotate(180deg);
 }
- 
-
- 
 
 .skill {
   // margin for free space
   margin-top: 12rem;
   margin-bottom: 15rem;
-  
+
   @include respond(tab-port) {
     margin-top: 5rem;
     margin-bottom: 10rem;
@@ -120,18 +158,16 @@ h2 {
     margin-bottom: 12rem;
   }
 
-  
-   
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(2, 1fr);
   min-height: 650px;
   height: 100vh;
   @include respond(tab-port) {
- grid-auto-columns: 1fr;
+    grid-auto-columns: 1fr;
     grid-template-rows: minmax(480px, 80vh) 15vh;
     height: 95vh;
-     min-height: 650px;
+    min-height: 650px;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
   }
@@ -139,18 +175,15 @@ h2 {
     grid-auto-columns: 1fr;
     grid-template-rows: 70vh 15vh;
     height: 85vh;
-     min-height: 650px;
+    min-height: 650px;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
-
   }
- 
 
-  
   padding: 0 #{scaleValue(80)};
 
   &_story {
-    color: rgba($color-black, .6);
+    color: rgba($color-black, 0.6);
     padding: 2px 6px;
 
     border: none;
@@ -158,12 +191,18 @@ h2 {
 }
 // animation for summary
 details[open] summary ~ * {
-  animation: sweep .5s ease-in-out;
+  animation: sweep 0.5s ease-in-out;
 }
 
 @keyframes sweep {
-  0%    {opacity: 0; margin-left: -10px}
-  100%  {opacity: 1; margin-left: 0px}
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
 }
 details > summary {
   list-style: none;
@@ -173,19 +212,13 @@ details > summary::-webkit-details-marker {
 }
 details {
   padding: 1rem 0;
-  
-  
-  
-   
 }
 details[open] > summary {
   color: $color-primary-cyan;
-  
- 
 }
 
 details[open] > p {
-  color: rgba($color-black, .6);
+  color: rgba($color-black, 0.6);
   height: 33%;
   line-height: 1.7;
   font-size: #{scaleValue(20)};
@@ -203,7 +236,7 @@ summary {
     font-size: 1.5rem;
   }
   padding: #{scaleValue(5)} #{scaleValue(8)};
-  background:rgb(243, 243, 243, .2);
+  background: rgb(243, 243, 243, 0.2);
   @include respond(phone) {
     padding: 0 #{scaleValue(10)};
   }
@@ -213,17 +246,12 @@ summary {
   align-items: center;
   justify-content: space-between;
   // box-shadow: 0 4px 2px -2px rgba(#000, .1);
-   box-shadow: 0 2px 2px rgba(#000, .1),
-      0 4px 4px rgba(#000, .1),
-      0 6px 6px rgba(#000, .1);
-   @include respond(phone) {
-     box-shadow: 0 2px 2px rgba(#000, .1),
-     0 4px 4px rgba(#000, 0.1)
-   }
+  box-shadow: 0 2px 2px rgba(#000, 0.1), 0 4px 4px rgba(#000, 0.1),
+    0 6px 6px rgba(#000, 0.1);
+  @include respond(phone) {
+    box-shadow: 0 2px 2px rgba(#000, 0.1), 0 4px 4px rgba(#000, 0.1);
+  }
 }
- 
- 
-
 
 // image style
 
@@ -232,23 +260,18 @@ summary {
 
   min-height: 100vh;
   // min-height: 100%;
-  
+
   @include respond(tab-port) {
     min-height: 30vh;
   }
-  
-  
-
 
   &_photo {
     display: block;
     width: #{scaleValue(400)};
-  
+
     // filter: blur(4px);
     height: #{scaleValue(266.95)};
-    
 
-    
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
     border-radius: 2px;
     position: absolute;
@@ -262,24 +285,24 @@ summary {
       top: 11%;
       @include respond(tab-port) {
         top: 18%;
-      left: 10%;
+        left: 10%;
       }
     }
     &-two {
-     top: 32%;
+      top: 32%;
       left: 31%;
       @include respond(tab-port) {
         top: 11%;
-      left: 35%;
+        left: 35%;
       }
     }
     &-three {
       left: 12%;
       top: 53%;
 
-         @include respond(tab-port) {
+      @include respond(tab-port) {
         top: 18%;
-      left: 59%;
+        left: 59%;
       }
     }
     &:hover {

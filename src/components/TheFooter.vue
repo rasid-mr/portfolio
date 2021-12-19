@@ -131,7 +131,7 @@ export default {
     const { hey } = this.$refs;
 
     const heynew = document.querySelector(".heynew");
-    console.log('welcome to footer')
+    
     const tlhey = gsap.timeline();
     gsap.registerPlugin(ScrollTrigger)
     tlhey.fromTo(

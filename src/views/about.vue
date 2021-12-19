@@ -20,7 +20,13 @@
     </div>
     
     <div class="about">
-      <img class="sumon" src="../assets/sumon.jpg" alt="I am sumon" />
+      <img srcset="../assets/sumon-phone.jpg 320w, ../assets/sumon.jpg 768w" 
+           sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 26vw, 26vw" 
+            alt="author photo"
+            class="sumon"
+            src="../assets/sumon.jpg"
+      >
+      <!-- <img class="sumon" src="../assets/sumon.jpg" alt="I am sumon" /> -->
       <p class="about-me-detail">
         When I was 8 years old, my mom give me 1 taka everyday for tiffin.
         Oneday I thought I store my one taka everyday, after many days it will

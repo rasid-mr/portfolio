@@ -4901,7 +4901,6 @@ export default {
     const headerTimeline = gsap.timeline();
     const { header } = this.$refs;
     const { paperRocket } = this.$refs;
-    // const {contact} = this.$refs;
 
     const contact = document.querySelector(".hero_contact");
     headerTimeline.from(header, {
@@ -4936,7 +4935,7 @@ export default {
       "-=.5"
     );
 
-    console.log(document.querySelector(".wrapping"));
+   
     const cloud = document.querySelectorAll(".cloud");
     const cloudRight = document.querySelector(".cloudRight");
 
@@ -4966,38 +4965,6 @@ export default {
         };
       },
     });
-
-    // pop blob animation
-    // if(window.innerWidth >=900) {
-    //     const popBlob = document.querySelector('.popBlob');
-    //     let observerCallbackblob = function (entries, _) {
-    //       const [entry] = entries;
-    //       console.log(entry);
-    //       if (entry.isIntersecting) {
-    //         popBlob.classList.add('wrapping')
-
-    //       } else {
-    //       popBlob.classList.remove('wrapping')
-    //       }
-    //     };
-    //     var obsOptions = {
-    //       root: null,
-    //       threshold: [0, .1],
-    //     };
-
-    //     this.observer = new IntersectionObserver(observerCallbackblob, obsOptions);
-
-    //       this.observer.observe(popBlob);
-    // } else{
-    //   console.log('small screen')
-    // }
-
-    //     window.addEventListener('resize', () => {
-    //   if(window.innerWidth == 900) {
-    //        this.observer.disconnect();
-    //   }
-
-    // });
   },
   destroyed() {
     this.observer.disconnect();
@@ -5478,28 +5445,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-// @import '../assets/sass/_blob.scss';
-
-// cloud hide when out of the window
-// sun orbit
-
-// overlap
-// .wrapping, .hero {
-//   grid-row: 1/-1;
-// }
-// .wrapping {
-//   grid-column:1/2;
-//   @include respond(tab-port) {
-//     display: none;
-//   }
-
-// }
-// .popblob {
-//   @include respond(tab-port) {
-//     display: none;
-//   }
-// }
-
 //  svg id visual
 .contact-paperRocket {
   display: flex;
@@ -5513,7 +5458,7 @@ export default {
   @include respond(phone) {
     width: #{scaleValue(115)};
   }
-  
+
   margin-left: 2rem;
 }
 .parent-Container {

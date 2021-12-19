@@ -2,7 +2,10 @@
   <section class="gsap">
     <div class="slide-reveal slide slide-one">
       <div class="image">
-        <img class="img" src="../assets/1.png" alt="" />
+        <img srcset="../assets/1-phone.jpg 320w, ../assets/1.png 1920w"
+              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+              class="img"
+              src="../assets/1.png"/>
         <div class="reveal-img"></div>
       </div>
 
@@ -28,13 +31,21 @@
         <div class="reveal-text"></div>
       </div>
       <div class="image">
-        <img class="img" src="../assets/2.png" alt="" />
+        <img srcset="../assets/2-phone.jpg 320w, ../assets/2.png 1920w"
+              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+              class="img"
+              src="../assets/2.png"
+         alt="showcase photo">
+       
         <div class="reveal-img"></div>
       </div>
     </div>
     <div class="slide-reveal slide slide-three">
       <div class="image">
-        <img class="img" src="../assets/chemistry1.jpg" alt="" />
+        <img srcset="../assets/chemistry1-phone.jpg 320w, ../assets/chemistry1.jpg 1797w"
+              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+              class="img"
+              src="../assets/chemistry1.jpg" />
         <div class="reveal-img"></div>
       </div>
 
@@ -53,7 +64,10 @@
     </div>
     <div class="slide-reveal slide-four">
       <div class="image">
-        <img class="img" src="../assets/chemistry2.jpg" alt="" />
+        <img srcset="../assets/chemistry2-phone.jpg 320w, ../assets/chemistry2.jpg 1797w"
+              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+              class="img"
+              src="../assets/chemistry2.jpg" />
         <div class="reveal-img"></div>
       </div>
 
@@ -82,7 +96,8 @@ export default {
     slideReveal.forEach((slide, index, slideReveal) => {
       gsap.defaults({ duration: 0.5 });
       const img = slide.querySelector("img");
-      console.log(img);
+      // console.log(img);
+
       const revealText = slide.querySelector(".reveal-text");
       const revealImg = slide.querySelector(".reveal-img");
       const tl2 = gsap.timeline();
@@ -104,7 +119,7 @@ export default {
     slides.forEach((slide, index, slides) => {
       gsap.defaults({ ease: "back", duration: 2 });
       let nextSlide = slides.length - 1 === index ? "end" : slides[index + 1];
-      console.log(nextSlide);
+      // console.log(nextSlide);
 
       ScrollTrigger.matchMedia({
         "(min-width:799px)": () => {
@@ -168,13 +183,13 @@ export default {
     ScrollTrigger.getAll().forEach((element) => {
       element.enable();
       element.refresh();
-      console.log(element.vars);
+      // console.log(element.vars);
     });
   },
   unmounted() {
     ScrollTrigger.getAll().forEach((element) => {
       element.kill();
-      console.log({ element });
+      // console.log({ element });
     });
   },
 };
