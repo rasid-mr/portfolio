@@ -120,6 +120,7 @@
 <script>
 import primaryButton from "../Layout/primary-button.vue";
 import { gsap } from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 export default {
   data: () => ({ value: "recent" }),
@@ -132,7 +133,7 @@ export default {
     const heynew = document.querySelector(".heynew");
     console.log('welcome to footer')
     const tlhey = gsap.timeline();
-
+    gsap.registerPlugin(ScrollTrigger)
     tlhey.fromTo(
       heynew,
       {
@@ -154,6 +155,10 @@ export default {
         yoyo: true,
       }
     );
+
+    ScrollTrigger.create({
+
+    })
   },
   methods: {
     mailTo() {
@@ -170,8 +175,9 @@ export default {
   fill: $color-primary-pink;
 }
 .stay {
-  margin-bottom: #{scaleValue(30)};
-  // align-self: flex-end;
+  margin-bottom: #{scaleValue(20)};
+  // align-self: flex-start;
+  font-weight: 600;
 
   @include respond(tab-port) {
     padding-top: #{scaleValue(30)};
@@ -233,7 +239,7 @@ export default {
   // width: max-content;
   white-space: nowrap;
   cursor: pointer;
-  font-size: #{scaleValue(36)};
+  // font-size: #{scaleValue(36)};
 }
 
 .contact-social {
@@ -259,10 +265,11 @@ export default {
 
 .stay-connected-router,
 .stay-connected-router:visited {
-  background: linear-gradient(to left, #6c139c, #3d6dd0);
-  background: -webkit-linear-gradient(to left, #6c139c, #2d6dd0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  // background: linear-gradient(to left, #6c139c, #3d6dd0);
+  // background: -webkit-linear-gradient(to left, #6c139c, #2d6dd0);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  color: rgb(235, 235, 235);
   font-weight: 600;
   padding: #{scaleValue(5)} 0;
   display: flex;

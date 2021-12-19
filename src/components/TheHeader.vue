@@ -65,9 +65,14 @@ export default {
     }
   },
   mounted() {
+
+     
      
     
     // const header = document.querySelector('.the-header');
+    
+    
+    
     const skill = document.querySelector('.parent-Container')
 
     // const header = this.$refs.header;
@@ -83,9 +88,9 @@ export default {
 const navHeight = header.getBoundingClientRect().height;
    this.observer = new IntersectionObserver(stickyNav, {
       threshold:0,
-      root:null
+      root:null,
       // rootMargin:`document.querySelector('.parent-Container').offsetWidth px`,
-      // rootMargin:`${navHeight}px`
+      rootMargin:`-${navHeight}px`
     })
      
      if(!skill) {this.observer.disconnect()} 

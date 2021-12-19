@@ -223,7 +223,10 @@ summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 2px -2px rgba(#000, .1);
+  // box-shadow: 0 4px 2px -2px rgba(#000, .1);
+   box-shadow: 0 2px 2px rgba(#000, .1),
+      0 4px 4px rgba(#000, .1),
+      0 6px 6px rgba(#000, .1);
    
 }
  
@@ -291,8 +294,8 @@ summary {
       z-index: 20;
     }
   }
-  &:hover &__photo:not(:hover) {
-    transform: scale(0.95);
-  }
+  // &_photo  &_photo:not(:hover) {
+  //   transform: scale(0.95);
+  // }
 }
 </style>
