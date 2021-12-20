@@ -59,7 +59,7 @@
         <svg
           version="1.1"
           id="portfolio"
-          @mouseenter="computerAnimation"
+          @mouseenter.once="computerAnimation"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
@@ -4928,11 +4928,11 @@ export default {
         duration: 1,
         opacity: 0,
         x: 50,
-        delay: 0.2,
+        // delay: 0.2,
 
         ease: "power.out",
       },
-      "-=.5"
+      "-=.8"
     );
 
    

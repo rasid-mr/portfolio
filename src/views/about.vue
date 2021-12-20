@@ -29,22 +29,22 @@
       <!-- <img class="sumon" src="../assets/sumon.jpg" alt="I am sumon" /> -->
       <p class="about-me-detail">
         When I was 8 years old, my mom give me 1 taka everyday for tiffin.
-        Oneday I thought I store my one taka everyday, after many days it will
-        be huge😁. I was so happy just think about it, I am goonna rich🤑 . I
+        One day I thought I store my one taka everyday, after many days it will
+        be huge😁. I was so happy just think about it, I am goonna be rich🤑 . I
         stated to save money below the almary in our house. Everything going on
         smoothly. In the fouth day, when I save 3 taka from three days. So,
         finally I can just expense todays one taka on that day so that I can eat
         "JALMURRY". Ohh I can remember the taste it was so tasty. I think
-        maybeone more "JALLMURRY", won't be a bad idea. Eventually I expense my
+        may be one more "JALLMURRY", won't be a bad idea. Eventually I expense my
         all money in just one day🤣🤣🤣. Becoming rich has never been true😂.
         <br />
         <br />
 
         I am chemistry mazor student at Jahangirnagor University. In my free
-        time(full-time😁), I do programming. It's really amazeing to create a
+        time(full-time😁), I do programming. It's really amazing to create a
         website from ground and I enjoy this so much.
-        <br />
-        I ❤ to watch movie. My favourite actor is Tom Cruise.
+        <!-- <br />
+        I ❤ to watch movie. My favourite actor is Tom Cruise. -->
       </p>
     </div>
   </div>

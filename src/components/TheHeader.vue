@@ -109,14 +109,14 @@ const navHeight = header.getBoundingClientRect().height;
     e.target.classList.add("active");
     gsap.to(".line1",   { rotate: "135",smoothOrigin:true,  transformOrigin:"37%", background: "black", duration:.5 });
     gsap.to(".line2",   { rotate: "-135", smoothOrigin:true,  transformOrigin:"37% ", background: "black", duration:.5  });
-    gsap.to("#logo",   { color: "black", duration:1 });
+    // gsap.to("#logo",   { color: "black", duration:1 });
     gsap.to(".nav-bar",  { clipPath: "circle(2500px at 100% -10%)", duration:1 });
     document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active");
     gsap.to(".line1",  { rotate: "0", y: 0, background: "black", duration:.5  });
     gsap.to(".line2",  { rotate: "0", y: 0, background: "black", duration:.5  });
-    gsap.to("#logo", { color: "white", duration:.5  });
+    // gsap.to("#logo", { color: "white", duration:.5  });
     gsap.to(".nav-bar", { clipPath: "circle(50px at 100% -10%)", duration:1 });
     document.body.classList.remove("hide");
   }

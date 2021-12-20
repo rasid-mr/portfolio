@@ -2,7 +2,7 @@
   <section class="gsap">
     <div class="slide-reveal slide slide-one">
       <div class="image">
-        <img srcset="../assets/1-phone.jpg 320w, ../assets/1.png 1920w"
+        <img srcset="../assets/1-phone.jpg 320w, ../assets/1-tab.jpg 1000w, ../assets/1.png 1920w"
               sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
               class="img"
               src="../assets/1.png"/>
@@ -31,7 +31,7 @@
         <div class="reveal-text"></div>
       </div>
       <div class="image">
-        <img srcset="../assets/2-phone.jpg 320w, ../assets/2.png 1920w"
+        <img srcset="../assets/2-phone.jpg 320w, ../assets/2-tab.jpg 1000w, ../assets/2.png 1920w"
               sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
               class="img"
               src="../assets/2.png"
@@ -42,7 +42,7 @@
     </div>
     <div class="slide-reveal slide slide-three">
       <div class="image">
-        <img srcset="../assets/chemistry1-phone.jpg 320w, ../assets/chemistry1.jpg 1797w"
+        <img srcset="../assets/chemistry1-phone.jpg 320w, ../assets/chemistry1-tab.jpg 1000w, ../assets/chemistry1.jpg 1797w"
               sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
               class="img"
               src="../assets/chemistry1.jpg" />
@@ -64,7 +64,7 @@
     </div>
     <div class="slide-reveal slide-four">
       <div class="image">
-        <img srcset="../assets/chemistry2-phone.jpg 320w, ../assets/chemistry2.jpg 1797w"
+        <img srcset="../assets/chemistry2-phone.jpg 320w, ../assets/chemistry2-tab.jpg 1000w, ../assets/chemistry2.jpg 1797w"
               sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
               class="img"
               src="../assets/chemistry2.jpg" />
