@@ -25,7 +25,7 @@ export default {
 html {
   font-size: 65.5%;
   font-family: "Fira Sans", sans-serif;
-  
+ 
 } /*10px*/
 
 body {

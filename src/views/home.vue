@@ -1,8 +1,11 @@
 <template>
+
   <div>
+    
     <div class="parent-Container">
       <!-- <div  class="wrapping popBlob">
   </div> -->
+  
       <div class="hero">
         <h1 class="hero_header" ref="header">
           <span class="hero_header-hey highlight"> Hey there, </span>
@@ -5462,6 +5465,7 @@ export default {
   margin-left: 2rem;
 }
 .parent-Container {
+  
   display: grid;
   grid-auto-flow: column;
   height: 100vh;
@@ -5470,7 +5474,7 @@ export default {
   overflow: hidden;
   background: url("../assets/frame.svg");
   background-position: left 100%;
-  background-origin: padding-box;
+  background-origin: border-box;
   background-size: 100%;
   background-repeat: no-repeat;
   padding-left: #{scaleValue(80)};

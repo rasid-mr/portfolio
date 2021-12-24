@@ -165,15 +165,15 @@ h2 {
   height: 100vh;
   @include respond(tab-port) {
     grid-auto-columns: 1fr;
-    grid-template-rows: minmax(480px, 80vh) 15vh;
-    height: 95vh;
+    grid-template-rows: minmax(580px, 100vh) minmax(220px, 25vh);
+    height: 105vh;
     min-height: 650px;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
   }
   @include respond(phone) {
     grid-auto-columns: 1fr;
-    grid-template-rows: 70vh 15vh;
+    grid-template-rows: minmax(550px, 110vh) minmax(220px, 25vh);
     height: 85vh;
     min-height: 650px;
     grid-template-columns: 1fr;

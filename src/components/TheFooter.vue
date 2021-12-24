@@ -87,7 +87,7 @@
     <div class="contact-social">
       <primary-button class="mailTo" @click="mailTo">Contact me</primary-button>
       <div class="social">
-        <a href="https://www.facebook.com/mohtasim.hasan.35">
+        <a class="facebook" href="https://www.facebook.com/mohtasim.hasan.35">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ionicon"
@@ -100,7 +100,7 @@
             />
           </svg>
         </a>
-        <a href="https://twitter.com/mohtasim_hasan">
+        <a class="twitter" href="https://twitter.com/mohtasim_hasan">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ionicon"
@@ -168,6 +168,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.facebook, .twitter {
+  cursor: pointer;
+  // z-index: 2;
+  position: relative;
+}
 .stt0 {
   fill: url(#SVGID_1_);
 }
@@ -204,7 +209,7 @@ export default {
 .footer {
   min-height: 350px;
   height: #{scaleValue(495)};
-
+ 
   background: rgb(11, 6, 8);
   background: radial-gradient(
     circle,
@@ -236,7 +241,7 @@ export default {
 }
 .mailTo {
   margin-right: #{scaleValue(15)};
-  
+  z-index: 3;
   white-space: nowrap;
   cursor: pointer;
    
@@ -252,7 +257,7 @@ export default {
 .ionicon {
   // fill: url(#SVGID_1_);
   fill:$color-primary-pink;
-
+  z-index: 5;
   width: 5rem;
   @include respond(tab-port) {
     width: 4rem;

@@ -63,13 +63,7 @@
       </div>
     </div>
     <div class="slide-reveal slide-four">
-      <div class="image">
-        <img srcset="../assets/chemistry2-phone.jpg 320w, ../assets/chemistry2-tab.jpg 1000w, ../assets/chemistry2.jpg 1797w"
-              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
-              class="img"
-              src="../assets/chemistry2.jpg" />
-        <div class="reveal-img"></div>
-      </div>
+     
 
       <div class="slide_header">
         <h1 class="slide_header-hero">Chmeistry is a very hard subject.</h1>
@@ -79,6 +73,13 @@
         </p>
 
         <div class="reveal-text"></div>
+      </div>
+       <div class="image">
+        <img srcset="../assets/chemistry2-phone.jpg 320w, ../assets/chemistry2-tab.jpg 1000w, ../assets/chemistry2.jpg 1797w"
+              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+              class="img"
+              src="../assets/chemistry2.jpg" />
+        <div class="reveal-img"></div>
       </div>
     </div>
   </section>
@@ -200,6 +201,7 @@ export default {
   background: $background-color;
   color: rgb(192, 192, 192);
   padding: 0 #{scaleValue(80)};
+   overflow: hidden;
 }
 
 .slide {
@@ -209,7 +211,7 @@ export default {
   line-height: 1.55;
 
   height: 100vh;
- 
+  
   background: rgb(30, 30, 32);
   margin-bottom: #{scaleValue(170)};
   @include respond(tab-port) {
@@ -223,9 +225,13 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
+ 
   margin: 0;
   line-height: 1.55;
-  background: rgb(30, 30, 32);
+  background: #1e1e20;
+  margin-top: #{scaleValue(100)};
+
+  
   @include respond(tab-port) {
     flex-direction: column;
   }
