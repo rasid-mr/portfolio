@@ -140,6 +140,7 @@ export default {
         xPercent: 20,
         duration: 1,
         rotation: 20,
+        delay:.25,
         repeat: -1,
         ease: "power1.out",
         transformOrigin: "left bottom",
@@ -149,15 +150,20 @@ export default {
         xPercent: -20,
         duration: 1,
         rotation: -5,
+       
         repeat: -1,
         ease: "power1.out",
         transformOrigin: "left bottom",
         yoyo: true,
       }
     );
-
+const stay = document.querySelector('.slide-four')
     ScrollTrigger.create({
-
+      animation:tlhey,
+      start:'top top',
+      trigger:stay,
+      toggleActions:'play none none pause',
+       
     })
   },
   methods: {
