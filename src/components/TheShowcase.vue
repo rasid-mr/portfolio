@@ -282,7 +282,7 @@ export default {
   overflow: hidden;
   @include respond(tab-port) {
     flex-basis: 10rem;
-    justify-self: flex-start;
+      
 
     flex-grow: 4;
   }

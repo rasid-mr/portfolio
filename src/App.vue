@@ -1,6 +1,6 @@
 <template>
   <the-header></the-header>
-
+<!-- <div v-if=""></div> -->
   <router-view v-slot="{Component, route}"> 
   <transition 
   mode="out-in"

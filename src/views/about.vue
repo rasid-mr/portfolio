@@ -15,7 +15,7 @@
     </div>
     <div class="allHeader">
  
-    <h4 class="medium experience">My daily work and experience</h4>
+    <h4 class=" experience">My daily work and experience</h4>
     <h4 class="passionate">What do, I love and passionate.</h4>
     </div>
     
@@ -47,13 +47,20 @@
         I ❤ to watch movie. My favourite actor is Tom Cruise. -->
       </p>
     </div>
+    <router-link class="homeButton" to="./home.vue">  <primary-button>HOME</primary-button></router-link>
+  
   </div>
 </template>
 
 <script>
 //  import {gsap} from 'gsap';
 //  import {ScrollTrigger} from 'gsap/ScrollTrigger'
-export default {};
+import primaryButton from '../Layout/primary-button.vue'
+export default {
+  components: {
+    primaryButton,
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -107,7 +114,7 @@ img {
   line-height: 1.5;
   @include respond(tab-port) {
     margin-top: 4rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
      color: rgb(235, 235, 235);
   }
   
@@ -149,5 +156,35 @@ img {
     width: calc(100% + 1.3px);
     height: 0px;
   }
+}
+.experience {
+  font-size: #{scaleValue(47)};
+  margin-bottom: #{scaleValue(14)};
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+}
+.allHeader {
+  @include respond(phone) {
+
+  }
+}
+.passionate {
+  font-size: #{scaleValue(25)};
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+}
+router-link {
+  text-decoration: none;
+}
+.homeButton {
+  display: none;
+  @include respond(tab-port) {
+    display: block;
+     margin: 2rem 0;
+     text-decoration: none;
+  }
+ 
 }
 </style>

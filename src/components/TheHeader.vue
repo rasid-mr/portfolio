@@ -82,7 +82,7 @@ export default {
     const stickyNav  = function(entries) {
       const [entry] = entries;
       // console.log(entry)
-      if(!entry.isIntersecting) { header.classList.zz('sticky')}
+      if(!entry.isIntersecting) { header.classList.add('sticky')}
       else{header.classList.remove('sticky')}
     }
 const navHeight = header.getBoundingClientRect().height;
