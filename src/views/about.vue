@@ -47,7 +47,7 @@
         I ❤ to watch movie. My favourite actor is Tom Cruise. -->
       </p>
     </div>
-    <router-link class="homeButton" to="./home.vue">  <primary-button>HOME</primary-button></router-link>
+    <router-link class="homeButton" to="./home">  <primary-button>HOME</primary-button></router-link>
   
   </div>
 </template>
