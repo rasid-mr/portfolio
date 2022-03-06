@@ -120,7 +120,7 @@
 <script>
 import primaryButton from "../Layout/primary-button.vue";
 import { gsap } from "gsap";
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default {
   data: () => ({ value: "recent" }),
@@ -131,16 +131,16 @@ export default {
     const { hey } = this.$refs;
 
     const heynew = document.querySelector(".heynew");
-    
+
     const tlhey = gsap.timeline();
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
     tlhey.fromTo(
       heynew,
       {
         xPercent: 20,
         duration: 1,
         rotation: 20,
-        delay:.25,
+        delay: 0.25,
         repeat: -1,
         ease: "power1.out",
         transformOrigin: "left bottom",
@@ -150,21 +150,20 @@ export default {
         xPercent: -20,
         duration: 1,
         rotation: -5,
-       
+
         repeat: -1,
         ease: "power1.out",
         transformOrigin: "left bottom",
         yoyo: true,
       }
     );
-const stay = document.querySelector('.slide-four')
+    const stay = document.querySelector(".slide-four");
     ScrollTrigger.create({
-      animation:tlhey,
-      start:'top top',
-      trigger:stay,
-      toggleActions:'play none none pause',
-       
-    })
+      animation: tlhey,
+      start: "top top",
+      trigger: stay,
+      toggleActions: "play none none pause",
+    });
   },
   methods: {
     mailTo() {
@@ -174,7 +173,8 @@ const stay = document.querySelector('.slide-four')
 };
 </script>
 <style lang="scss" scoped>
-.facebook, .twitter {
+.facebook,
+.twitter {
   cursor: pointer;
   // z-index: 2;
   position: relative;
@@ -187,7 +187,7 @@ const stay = document.querySelector('.slide-four')
 }
 .stay {
   margin-bottom: #{scaleValue(20)};
-  
+
   font-weight: 600;
 
   @include respond(tab-port) {
@@ -215,7 +215,7 @@ const stay = document.querySelector('.slide-four')
 .footer {
   min-height: 350px;
   height: #{scaleValue(495)};
- 
+
   background: rgb(11, 6, 8);
   background: radial-gradient(
     circle,
@@ -250,7 +250,6 @@ const stay = document.querySelector('.slide-four')
   z-index: 3;
   white-space: nowrap;
   cursor: pointer;
-   
 }
 
 .contact-social {
@@ -262,7 +261,7 @@ const stay = document.querySelector('.slide-four')
 }
 .ionicon {
   // fill: url(#SVGID_1_);
-  fill:$color-primary-pink;
+  fill: $color-primary-pink;
   z-index: 5;
   width: 5rem;
   @include respond(tab-port) {
@@ -277,7 +276,6 @@ const stay = document.querySelector('.slide-four')
 
 .stay-connected-router,
 .stay-connected-router:visited {
- 
   color: rgb(235, 235, 235);
   font-weight: 600;
   padding: #{scaleValue(5)} 0;
@@ -310,7 +308,6 @@ const stay = document.querySelector('.slide-four')
   &:focus {
     &::after {
       transform: none;
-      
     }
   }
 }
@@ -327,7 +324,7 @@ const stay = document.querySelector('.slide-four')
   justify-content: center;
   align-items: center;
   margin: 0;
-  
+
   &-me {
     font-size: #{scaleValue(40)};
 
@@ -335,6 +332,5 @@ const stay = document.querySelector('.slide-four')
       font-size: #{scaleValue(50)};
     }
   }
-  
 }
 </style>

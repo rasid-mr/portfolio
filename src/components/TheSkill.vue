@@ -23,7 +23,7 @@
           I learned HTML in my college days. Seeing the hello world in the
           computer screen amazeing. My curiosity thrieve me to go more deep
           level. I have a experience of HTML over 5 years. I can depict any page
-          with html, css, javascript.
+          with html, css(BOOTSTRAP & OPEN), javascript.
         </p>
       </details>
       <details open>
@@ -42,17 +42,14 @@
             />
           </svg>
         </summary>
-        <p>
-          Vue.js is one of the most famous javascript framework right now. It
-          has 189k stars in github right now and it's growing so fast. It is a
-          simple library with lot of feature with small bundle size. I made some
-          site with vue.js, I exhit some of them below.
+        <p>I know all the fundamentals of Vue js. Communication between component is very important in Vue js.
+          I comprehend the state management system(Vuex) of Vue js. Vue router is a convenient solution for routing
+         . Vue router transition makes the website more engaging to the user. 
         </p>
       </details>
       <details open>
         <summary @click="arrowChange">
-          SIGNLE PAGE APP(SPA)
-
+        GSAP & animejs (animation)
           <svg
             class="arrow transitionArrow"
             xmlns="http://www.w3.org/2000/svg"
@@ -66,10 +63,9 @@
           </svg>
         </summary>
         <p>
-          Due to the covid-19 pandemic, everything is going online from offline.
-          Thus, the web developer industry very growing very fast. Among them
-          SPA is surging very high. SPA site is very famous because they are
-          most usable for an end user. Vue.js is specialized in making SPA site.
+          Gsap and animejs is two javascript animation library. I can morph Svg using animejs.
+          ScrollTrigger plugin of gsap is a very productive element for front end dev. Implementing lazy loading in a website,
+          make's website more pleaseable. Parrallax effect is on another level of enhancing user experience in a webpage.
         </p>
       </details>
     </div>
@@ -275,17 +271,20 @@ summary {
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
     border-radius: 2px;
     position: absolute;
-
+  
     z-index: 10;
     transition: all 0.2s;
     outline-offset: #{scaleValue(20)};
+    //  background: linear-gradient( rgb(156, 124, 18), rgb(209, 44, 44));
+    //  background-blend-mode: screen;
 
     &-one {
       left: 44%;
+     
       top: 11%;
       @include respond(tab-port) {
-        top: 18%;
-        left: 10%;
+        // top: 18%;
+        // left: 10%;
       }
     }
     &-two {

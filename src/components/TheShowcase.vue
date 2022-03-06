@@ -2,15 +2,21 @@
   <section class="gsap">
     <div class="slide-reveal slide slide-one">
       <div class="image">
-        <img srcset="../assets/1-phone.jpg 320w, ../assets/1-tab.jpg 1000w, ../assets/1.png 1920w"
-              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
-              class="img"
-              src="../assets/1.png"/>
+        <img
+          srcset="
+            ../assets/1-phone.jpg  320w,
+            ../assets/1-tab.jpg   1000w,
+            ../assets/1.png       1920w
+          "
+          sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+          class="img"
+          src="../assets/1.png"
+        />
         <div class="reveal-img"></div>
       </div>
 
       <div class="slide_header">
-        <h1 class="slide_header-hero">Thought.co is a online learning site.</h1>
+        <h1 class="slide_header-hero"> <span class="highlight">Thought.co</span>  is a online learning site.</h1>
         <p class="slide_header-info">
           It has huge resource on STEM subject. It also offers guidence to
           learning different language. I mostly read this sites chemistry and
@@ -22,63 +28,79 @@
     </div>
     <div class="slide-reveal slide slide-two">
       <div class="slide_header">
-        <h1 class="slide_header-hero">I cloned this site🔥!!</h1>
+        <h1 class="slide_header-hero">I <span class="highlight">cloned</span>  this site🔥!!</h1>
         <p class="slide_header-info">
-          Thought.co use most of the vue core feature. It is the most advanced
+          Thought.co use most of the <span class="highlight">vue core feature</span>. It is the most advanced
           and sofhisticate site, I have ever made.
         </p>
 
         <div class="reveal-text"></div>
       </div>
       <div class="image">
-        <img srcset="../assets/2-phone.jpg 320w, ../assets/2-tab.jpg 1000w, ../assets/2.png 1920w"
-              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
-              class="img"
-              src="../assets/2.png"
-         alt="showcase photo">
-       
+        <img
+          srcset="
+            ../assets/2-phone.jpg  320w,
+            ../assets/2-tab.jpg   1000w,
+            ../assets/2.png       1920w
+          "
+          sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+          class="img"
+          src="../assets/2.png"
+          alt="showcase photo"
+        />
+
         <div class="reveal-img"></div>
       </div>
     </div>
     <div class="slide-reveal slide slide-three">
       <div class="image">
-        <img srcset="../assets/chemistry1-phone.jpg 320w, ../assets/chemistry1-tab.jpg 1000w, ../assets/chemistry1.jpg 1797w"
-              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
-              class="img"
-              src="../assets/chemistry1.jpg" />
+        <img
+          srcset="
+            ../assets/chemistry1-phone.jpg  320w,
+            ../assets/chemistry1-tab.jpg   1000w,
+            ../assets/chemistry1.jpg       1797w
+          "
+          sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+          class="img"
+          src="../assets/chemistry1.jpg"
+        />
         <div class="reveal-img"></div>
       </div>
 
       <div class="slide_header">
         <h1 class="slide_header-hero">
-          Better things for better better living through Chemistry.
+         <span class="highlight">Better</span>  things for better living through Chemistry.
         </h1>
         <p class="slide_header-info">
-          Chemistry is a challenging subject for most people, but it doesn't
+          <span class="highlight">Chemistry</span> is a challenging subject for most people, but it doesn't
           have to be. The number one reason people struggle with chemistry is
-          that they don't approach it the right way.
+          that they don't approach it the <span class="highlight">right way</span> .
         </p>
 
         <div class="reveal-text"></div>
       </div>
     </div>
     <div class="slide-reveal slide-four">
-     
-
       <div class="slide_header">
         <h1 class="slide_header-hero">Chmeistry is a very hard subject.</h1>
         <p class="slide_header-info">
-          If you make a certain molecule, that saves live. I think it's beutiful
+          If you make a <span class="highlight"> certain molecule</span>, that <span class="highlight">saves live</span>. I think it's beutiful
           to do this.
         </p>
 
         <div class="reveal-text"></div>
       </div>
-       <div class="image">
-        <img srcset="../assets/chemistry2-phone.jpg 320w, ../assets/chemistry2-tab.jpg 1000w, ../assets/chemistry2.jpg 1797w"
-              sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
-              class="img"
-              src="../assets/chemistry2.jpg" />
+      <div class="image">
+        <img
+          srcset="
+            ../assets/chemistry2-phone.jpg  320w,
+            ../assets/chemistry2-tab.jpg   1000w,
+            ../assets/chemistry2.jpg       1797w
+          "
+          sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
+          class="img"
+          src="../assets/chemistry2.jpg"
+        />
         <div class="reveal-img"></div>
       </div>
     </div>
@@ -197,11 +219,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ 
 .gsap {
   background: $background-color;
   color: rgb(192, 192, 192);
   padding: 0 #{scaleValue(80)};
-   overflow: hidden;
+  overflow: hidden;
 }
 
 .slide {
@@ -209,15 +232,18 @@ export default {
   justify-content: center;
   align-items: center;
   line-height: 1.55;
-
+  gap: 3rem;
   height: 100vh;
-  
   background: rgb(30, 30, 32);
   margin-bottom: #{scaleValue(170)};
+
   @include respond(tab-port) {
     flex-direction: column;
      
     margin-bottom: #{scaleValue(530)};
+  }
+  @include respond(phone) {
+    gap: 0;
   }
 }
 .slide-four {
@@ -225,15 +251,16 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
- 
-  margin: 0;
+  gap: 3rem;
   line-height: 1.55;
   background: #1e1e20;
   margin-top: #{scaleValue(100)};
 
-  
   @include respond(tab-port) {
     flex-direction: column;
+  }
+  @include respond(phone) {
+    gap: 0;
   }
 }
 
@@ -243,7 +270,6 @@ export default {
   display: flex;
   flex-flow: column wrap;
   padding: 0 #{scaleValue(20)};
-
   flex: 1;
   flex-basis: 25rem;
   overflow: hidden;
@@ -268,8 +294,13 @@ export default {
   }
   &-info {
     font-size: #{scaleValue(25)};
+     word-spacing: 1.3px;
+
     @include respond(tab-port) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+    }
+    @include respond(phone) {
+      font-size: 1.4rem;
     }
   }
 }
@@ -282,8 +313,6 @@ export default {
   overflow: hidden;
   @include respond(tab-port) {
     flex-basis: 10rem;
-      
-
     flex-grow: 4;
   }
   .img {
@@ -304,5 +333,44 @@ export default {
   background: rgb(30, 30, 32);
   left: 0;
   top: -15%;
+  
+}
+.highlight {
+   color: rgb(235, 235, 235);
+  font-weight: 600;
+  padding: #{scaleValue(5)} 0;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $color-primary-pink;
+ 
+  display: inline-block;
+  position: relative;
+  padding: 0 0.23rem 0.2rem;
+  isolation: isolate;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 100%;
+    background-color: rgba($color-primary-violet, .6);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: scaley(0);
+    transition: transform 0.25s;
+    content: "";
+  }
+  &:hover,
+  &:focus {
+    &::after {
+      transform: none;
+      
+    }
+  }
 }
 </style>

@@ -4,7 +4,7 @@
   "scripts": {
     "build": "vite build",
     "serve": "vite preview",
-    "dev": "vite --host"
+    "dev": "vite --host 0.0.0.0 --port 8000"
   },
   "dependencies": {
     "animejs": "^3.2.1",

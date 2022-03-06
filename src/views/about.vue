@@ -28,12 +28,12 @@
       >
       <!-- <img class="sumon" src="../assets/sumon.jpg" alt="I am sumon" /> -->
       <p class="about-me-detail">
-        When I was 8 years old, my mom give me 1 taka everyday for tiffin.
-        One day I thought I store my one taka everyday, after many days it will
+        When I was a 2nd grade student, my mom give me 1 taka everyday for tiffin.
+        One day I thought, I should store my one taka everyday, after many days it will
         be huge😁. I was so happy just think about it, I am goonna be rich🤑 . I
-        stated to save money below the almary in our house. Everything going on
-        smoothly. In the fouth day, when I save 3 taka from three days. So,
-        finally I can just expense todays one taka on that day so that I can eat
+        started to save money below the almary in our house. Everything going
+        smoothly. In the fouth day, when I save 3 taka from 3 days.
+        On forth day, I can just expense todays one taka on that day, no offense😅. Oh, now I can eat
         "JALMURRY". Ohh I can remember the taste it was so tasty. I think
         may be one more "JALLMURRY", won't be a bad idea. Eventually I expense my
         all money in just one day🤣🤣🤣. Becoming rich has never been true😂.
@@ -47,7 +47,7 @@
         I ❤ to watch movie. My favourite actor is Tom Cruise. -->
       </p>
     </div>
-    <router-link class="homeButton" to="./home">  <primary-button>HOME</primary-button></router-link>
+    <router-link class="homeButton" to="./home">  <primary-button>Go to HOME</primary-button></router-link>
   
   </div>
 </template>
@@ -112,6 +112,7 @@ img {
 .about-me-detail {
   font-size: #{scaleValue(24)};
   line-height: 1.5;
+  word-spacing: 2px;
   @include respond(tab-port) {
     margin-top: 4rem;
     font-size: 1.7rem;

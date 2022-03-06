@@ -119,6 +119,7 @@ const navHeight = header.getBoundingClientRect().height;
     // gsap.to("#logo", { color: "white", duration:.5  });
     gsap.to(".nav-bar", { clipPath: "circle(50px at 100% -10%)", duration:1 });
     document.body.classList.remove("hide");
+    console.log('header working')
   }
 }, 
 hideNav() {
@@ -127,8 +128,12 @@ hideNav() {
     gsap.to("#logo", { color: "white", duration:.5  });
     gsap.to(".nav-bar", { clipPath: "circle(50px at 100% -10%)", duration:1 });
     document.body.classList.remove("hide");
+    console.log('header working')
 },
  
+ console() {
+   console.log('header working')
+ }
  
    },
    unmounted() {
@@ -153,6 +158,7 @@ hideNav() {
   position: relative;
 }
 .nav-bar {
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -178,6 +184,7 @@ hideNav() {
   display: flex;
   flex-flow: column nowrap;
   font-size: 3rem;
+  
   @include respond(tab-port){
     font-size: 2.5rem;
 

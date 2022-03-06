@@ -9,7 +9,7 @@
       <div class="hero">
         <h1 class="hero_header" ref="header">
           <span class="hero_header-hey highlight"> Hey there, </span>
-          I am Sumon, I am a front end developer.
+         I am a Vue JS developer. Get the red 💊🧠.
         </h1>
         <div class="contact-paperRocket">
           <primary-button @click="mailTo" ref="contact" class="hero_contact">
@@ -5505,6 +5505,8 @@ export default {
 .hero_header {
   color: $color-primary-cyan;
   font-weight: 600;
+  line-height: 1.4;
+  word-spacing: 1.3px;
   font-size: #{scaleValue(56.5)};
   margin-top: #{scaleValue(-65)};
 
@@ -5513,6 +5515,7 @@ export default {
   }
 
   @include respond(phone) {
+     line-height: 1.5;
     font-size: #{scaleValue(90)};
   }
 
