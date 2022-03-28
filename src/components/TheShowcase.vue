@@ -358,7 +358,8 @@ export default {
     bottom: 0;
     left: 0;
     transform-origin: 0 100%;
-    background-color: rgba($color-primary-violet, .6);
+    // background-color: rgba(white, .9);
+    background: currentColor;
     mix-blend-mode: difference;
     pointer-events: none;
     transform: scaley(0);
