@@ -176,7 +176,7 @@ export default {
 .facebook,
 .twitter {
   cursor: pointer;
-  // z-index: 2;
+ 
   position: relative;
 }
 .stt0 {
@@ -189,19 +189,29 @@ export default {
   margin-bottom: #{scaleValue(20)};
 
   font-weight: 600;
+  font-size: #{scaleValue(60)};
+
+  
 
   @include respond(tab-port) {
     padding-top: #{scaleValue(30)};
   }
   @media (min-width: 400px) {
     padding-top: #{scaleValue(40)};
+    font-size: #{scaleValue(80)};
   }
 }
+// svg
 .hey {
-  max-width: 16rem;
-  width: #{scaleValue(180)};
+  max-width: 18rem;
+  width: #{scaleValue(310)};
 
   margin-right: #{scaleValue(25)};
+  margin-top: #{scaleValue(10)};
+
+  @include respond(tab-land) {
+    margin-top: 0;
+  }
 }
 .footer_hey {
   display: flex;
@@ -213,7 +223,7 @@ export default {
   margin: 0;
 }
 .footer {
-  min-height: 350px;
+  min-height: 500px;
   height: #{scaleValue(495)};
 
   background: rgb(11, 6, 8);
@@ -230,9 +240,11 @@ export default {
   // grid-auto-flow: column;
   display: flex;
   flex-flow: column;
+  gap: #{scaleValue(20)};
   justify-content: center;
   @include respond(phone) {
-    min-height: 220px;
+    min-height: 320px;
+    gap: 1.4rem;
   }
   & > * {
     flex-basis: 21%;
@@ -249,6 +261,7 @@ export default {
   margin-right: #{scaleValue(15)};
   z-index: 3;
   white-space: nowrap;
+  font-size: #{scaleValue(50)};
   cursor: pointer;
 }
 
@@ -256,19 +269,21 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  gap: 1rem;
   margin: 0;
+ 
 }
 .ionicon {
   // fill: url(#SVGID_1_);
   fill: $color-primary-pink;
-  z-index: 5;
-  width: 5rem;
+  
+  width: #{scaleValue(90)};
   @include respond(tab-port) {
-    width: 4rem;
+    width: #{scaleValue(110)};
   }
   @include respond(phone) {
-    width: 3.5rem;
+    // width: 5.5rem;
+    width: #{scaleValue(130)};
   }
   margin: 0 1rem;
   cursor: pointer;
@@ -278,6 +293,7 @@ export default {
 .stay-connected-router:visited {
   color: rgb(235, 235, 235);
   font-weight: 600;
+   
   padding: #{scaleValue(5)} 0;
   display: flex;
   justify-content: center;
@@ -289,6 +305,7 @@ export default {
   position: relative;
   padding: 0 0.23rem 0.2rem;
   isolation: isolate;
+  transform: translate(-14%);
 
   &::after {
     position: absolute;
@@ -326,10 +343,12 @@ export default {
   margin: 0;
 
   &-me {
-    font-size: #{scaleValue(40)};
-
+    font-size: #{scaleValue(60)};
+    @include respond(tab-port) {
+      font-size: #{scaleValue(70)};
+    }
     @include respond(phone) {
-      font-size: #{scaleValue(50)};
+      font-size: #{scaleValue(80)};
     }
   }
 }

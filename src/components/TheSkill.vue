@@ -283,8 +283,8 @@ summary {
      
       top: 11%;
       @include respond(tab-port) {
-        // top: 18%;
-        // left: 10%;
+        top: 18%;
+        left: 10%;
       }
     }
     &-two {

@@ -86,6 +86,7 @@ h5 {
 html {
     scrollbar-color: #6969dd #e0e0e0;
     scrollbar-width: thin;
+    scroll-behavior: smooth;
 }
 
  body::-webkit-scrollbar {

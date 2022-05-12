@@ -2,6 +2,7 @@
   <section class="gsap">
     <div class="slide-reveal slide slide-one">
       <div class="image">
+         <a href="https://thoughtco-clone.netlify.app/" target="blank">
         <img
           srcset="
             ../assets/1-phone.jpg  320w,
@@ -12,11 +13,16 @@
           class="img"
           src="../assets/1.png"
         />
+         </a>
         <div class="reveal-img"></div>
       </div>
 
       <div class="slide_header">
-        <h1 class="slide_header-hero"> <span class="highlight">Thought.co</span>  is a online learning site.</h1>
+        <h1 class="slide_header-hero">
+        <a href="https://thoughtco-clone.netlify.app/" target="blank">
+         <span class="highlight">Thought.co</span> is a online learning site.
+        </a> 
+        </h1>
         <p class="slide_header-info">
           It has huge resource on STEM subject. It also offers guidence to
           learning different language. I mostly read this sites chemistry and
@@ -28,15 +34,21 @@
     </div>
     <div class="slide-reveal slide slide-two">
       <div class="slide_header">
-        <h1 class="slide_header-hero">I <span class="highlight">cloned</span>  this site🔥!!</h1>
+        <h1 class="slide_header-hero">
+      <a href="https://thoughtco-clone.netlify.app/" target="blank">
+           <span class="highlight">I cloned</span> this site❤️‍🔥!!
+       </a>
+        </h1>
         <p class="slide_header-info">
-          Thought.co use most of the <span class="highlight">vue core feature</span>. It is the most advanced
-          and sofhisticate site, I have ever made.
+          Thought.co use most of the
+          <span class="highlight">vue core feature</span>. It is the most
+          advanced and sofhisticate site, I have ever made.
         </p>
 
         <div class="reveal-text"></div>
       </div>
       <div class="image">
+        <a href="https://thoughtco-clone.netlify.app/" target="blank">
         <img
           srcset="
             ../assets/2-phone.jpg  320w,
@@ -48,33 +60,41 @@
           src="../assets/2.png"
           alt="showcase photo"
         />
+        </a>
 
         <div class="reveal-img"></div>
       </div>
     </div>
     <div class="slide-reveal slide slide-three">
       <div class="image">
+        <a href="https://leafy-pothos-abeb64.netlify.app/" target="blank">
+        
         <img
           srcset="
-            ../assets/chemistry1-phone.jpg  320w,
-            ../assets/chemistry1-tab.jpg   1000w,
-            ../assets/chemistry1.jpg       1797w
+            ../assets/organic-1-mobile.jpg  768w,
+            ../assets/organic-1-tab.jpg     768w,
+            ../assets/organic-1.jpg        1920w
           "
           sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
           class="img"
-          src="../assets/chemistry1.jpg"
+          src="../assets/organic-1.jpg"
         />
+        </a>
         <div class="reveal-img"></div>
       </div>
 
       <div class="slide_header">
         <h1 class="slide_header-hero">
-         <span class="highlight">Better</span>  things for better living through Chemistry.
+          <!-- <span class="highlight">Better</span> things for better living through -->
+           <a href="https://thoughtco-clone.netlify.app/" target="blank">
+          <span class="highlight">Organic </span> veg & fruits.
+          </a>
         </h1>
         <p class="slide_header-info">
-          <span class="highlight">Chemistry</span> is a challenging subject for most people, but it doesn't
-          have to be. The number one reason people struggle with chemistry is
-          that they don't approach it the <span class="highlight">right way</span> .
+           The term<span class="highlight">“organic”</span>  refers to
+          the way agricultural products are grown and processed.  <span class="highlight"> Organic crops </span>
+          must be grown without the use of synthetic herbicides, pesticides, and
+          fertilizers, or bioengineered genes (GMOs).
         </p>
 
         <div class="reveal-text"></div>
@@ -82,25 +102,31 @@
     </div>
     <div class="slide-reveal slide-four">
       <div class="slide_header">
-        <h1 class="slide_header-hero">Chmeistry is a very hard subject.</h1>
+        <h1 class="slide_header-hero">
+           <a href="https://thoughtco-clone.netlify.app/" target="blank">
+           <span class="highlight"> Easy </span> way to get
+            Organic veg & fruit.
+           </a>
+        </h1>
         <p class="slide_header-info">
-          If you make a <span class="highlight"> certain molecule</span>, that <span class="highlight">saves live</span>. I think it's beutiful
-          to do this.
+         How your food is grown or raised can have a  <span class="highlight"> major impact </span> on your mental and emotional health as well as the environment. Organic foods often have more beneficial nutrients, such as antioxidants.
         </p>
 
         <div class="reveal-text"></div>
       </div>
       <div class="image">
+          <a href="https://leafy-pothos-abeb64.netlify.app/" target="blank">
         <img
           srcset="
-            ../assets/chemistry2-phone.jpg  320w,
-            ../assets/chemistry2-tab.jpg   1000w,
-            ../assets/chemistry2.jpg       1797w
+            ../assets/organic-2-mobile.jpg  768w,
+            ../assets/organic-2-tab.jpg    768w,
+            ../assets/organic-2.jpg        1920w
           "
           sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
           class="img"
-          src="../assets/chemistry2.jpg"
+          src="../assets/organic-2.jpg"
         />
+          </a>
         <div class="reveal-img"></div>
       </div>
     </div>
@@ -219,7 +245,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- 
+
+// styleing the header of each section.
+h1 a {
+  color:  rgb(192, 192, 192);
+  text-decoration-style: dotted;
+
+  &:hover {
+    color: currentColor;
+  }
+}
 .gsap {
   background: $background-color;
   color: rgb(192, 192, 192);
@@ -239,7 +274,7 @@ export default {
 
   @include respond(tab-port) {
     flex-direction: column;
-     
+
     margin-bottom: #{scaleValue(530)};
   }
   @include respond(phone) {
@@ -294,7 +329,7 @@ export default {
   }
   &-info {
     font-size: #{scaleValue(25)};
-     word-spacing: 1.3px;
+    word-spacing: 1.3px;
 
     @include respond(tab-port) {
       font-size: 1.6rem;
@@ -333,10 +368,9 @@ export default {
   background: rgb(30, 30, 32);
   left: 0;
   top: -15%;
-  
 }
 .highlight {
-   color: rgb(235, 235, 235);
+  color: rgb(235, 235, 235);
   font-weight: 600;
   padding: #{scaleValue(5)} 0;
   display: flex;
@@ -345,7 +379,7 @@ export default {
   white-space: nowrap;
   text-decoration: none;
   color: $color-primary-pink;
- 
+
   display: inline-block;
   position: relative;
   padding: 0 0.23rem 0.2rem;
@@ -370,7 +404,6 @@ export default {
   &:focus {
     &::after {
       transform: none;
-      
     }
   }
 }
