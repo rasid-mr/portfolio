@@ -74,6 +74,7 @@
     <div class="skill_image">
       <div class="composition">
         <img
+        loading="lazy"
           class="composition_photo-one composition_photo"
           srcset="
             ../assets/hand-art-phone.jpg  320w,
@@ -85,6 +86,7 @@
         />
 
         <img
+        loading="lazy"
           class="composition_photo-two composition_photo"
           srcset="
             ../assets/table-computer-phone.jpg  320w,
@@ -96,6 +98,7 @@
         />
 
         <img
+        loading="lazy"
           class="composition_photo-three composition_photo"
           srcset="../assets/do-what-phone.jpg 320w, ../assets/do-what.jpg 1920w"
           sizes="(max-width: 56.25em) 25vw, (max-width: 37.5em) 25vw, 350px"

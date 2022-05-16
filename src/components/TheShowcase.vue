@@ -72,7 +72,7 @@
         <img
           srcset="
             ../assets/organic-1-mobile.jpg  768w,
-            ../assets/organic-1-tab.jpg     768w,
+            ../assets/organic-1-tab.jpg     1000w,
             ../assets/organic-1.jpg        1920w
           "
           sizes="(max-width: 56.25em) 62vw, (max-width: 37.5em) 90vw, 630px"
