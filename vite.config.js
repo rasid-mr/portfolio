@@ -27,6 +27,7 @@ export default defineConfig({
         $background-color:  rgb(30, 30, 32);
         $color-white: #fff;
         $color-black: #000;
+        $body-padding:#{scaleValue(80)};
 
         @mixin respond($breakpoint) {
           @if $breakpoint == phone {

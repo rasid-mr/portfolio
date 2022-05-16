@@ -249,16 +249,19 @@ export default {
 // styleing the header of each section.
 h1 a {
   color:  rgb(192, 192, 192);
-  text-decoration-style: dotted;
+  text-decoration-style: none;
+  text-decoration-color: $color-primary-pink;
+   
 
   &:hover {
-    color: currentColor;
+    // color: rgb(33, 176, 138);
+    text-decoration-style: dotted;
   }
 }
 .gsap {
   background: $background-color;
   color: rgb(192, 192, 192);
-  padding: 0 #{scaleValue(80)};
+  padding: 0 $body-padding;
   overflow: hidden;
 }
 

@@ -45,7 +45,7 @@
        
       </ul>
       <div class="header_contact">
-        <h1 class="big"><span> !! </span>Loose Yourself <span> !! </span></h1>
+        <h1 class="big"><span class="surprised"> !! </span>Loose Yourself <span class="surprised"> !! </span></h1>
         <p>
            
         </p>
@@ -143,7 +143,7 @@ hideNav() {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .nav-header {
   min-height: 8vh;
   font-size: 1rem;
@@ -153,7 +153,7 @@ hideNav() {
   color: white;
   background: #ebebeb;
   width: 100%;
-  padding: 2rem #{scaleValue(80)};
+  padding: 2rem $body-padding;
   z-index: 2;
   position: relative;
 }
@@ -248,9 +248,11 @@ body.hide {
  }
  
 
- 
+ h1 {
+   color:$color-primary-violet;
+ }
 
-span {
+.surprised {
   color: $color-primary-pink;
 }
  

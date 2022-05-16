@@ -67,16 +67,14 @@ h5 {
 
 }
 
-.medium {
-  font-size: #{scaleValue(39.98)}  ;
-  margin-bottom: #{scaleValue(30)};
-  //   @include respond(phone) {
-  //   font-size: 2rem !important;
-  // }
-  @include respond(tab-port) {
-    font-size: 2rem;
-  }
-}
+// .medium {
+//   font-size: #{scaleValue(39.98)}  ;
+//   margin-bottom: #{scaleValue(30)};
+   
+//   @include respond(tab-port) {
+//     font-size: 2rem;
+//   }
+// }
 
 .small {
   font-size: #{scaleValue(28.27)}  ;

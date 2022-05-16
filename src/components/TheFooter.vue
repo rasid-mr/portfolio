@@ -189,28 +189,30 @@ export default {
   margin-bottom: #{scaleValue(20)};
 
   font-weight: 600;
-  font-size: #{scaleValue(60)};
-
+  // font-size: #{scaleValue(60)};
+  font-size: #{scaleValue(90)};
+  
   
 
   @include respond(tab-port) {
     padding-top: #{scaleValue(30)};
+    font-size: #{scaleValue(110)};
   }
   @media (min-width: 400px) {
     padding-top: #{scaleValue(40)};
-    font-size: #{scaleValue(80)};
   }
 }
 // svg
 .hey {
-  max-width: 18rem;
-  width: #{scaleValue(310)};
+  // max-width: 18rem;
+  width: #{scaleValue(300)};
 
   margin-right: #{scaleValue(25)};
-  margin-top: #{scaleValue(10)};
+  // margin-top: #{scaleValue(10)};
 
   @include respond(tab-land) {
     margin-top: 0;
+
   }
 }
 .footer_hey {
@@ -263,6 +265,9 @@ export default {
   white-space: nowrap;
   font-size: #{scaleValue(50)};
   cursor: pointer;
+  @include respond(phone) {
+    font-size: #{scaleValue(75)};
+  }
 }
 
 .contact-social {
@@ -348,7 +353,7 @@ export default {
       font-size: #{scaleValue(70)};
     }
     @include respond(phone) {
-      font-size: #{scaleValue(80)};
+      font-size: #{scaleValue(90)};
     }
   }
 }

@@ -66,9 +66,9 @@ export default {
 <style lang="scss" scoped>
 .app {
  
-  padding: 0 #{scaleValue(80)};
+  padding: 0 $body-padding;
   color: $color-primary-pink;
-  overflow: hidden;
+  // overflow: hidden;
   
    @include respond(tab-port){
     background: rgb(41, 41, 41);
@@ -121,7 +121,7 @@ img {
   
 }
 .allHeader {
-  margin-top: 3rem;
+  padding-top: 3rem;
   @include respond(tab-port){
     display: flex;
     flex-direction: column;
@@ -131,7 +131,7 @@ img {
 }
 .custom-shape-divider-bottom-1639632917 {
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 0;
   width: 100%;
   overflow: hidden;

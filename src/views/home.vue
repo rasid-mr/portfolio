@@ -9,7 +9,7 @@
       <div class="hero">
         <h1 class="hero_header" ref="header">
           <span class="hero_header-hey highlight"> Hey there, </span>
-         I am a Vue JS developer. Get the red 💊🧠.
+        <span class='text-shadow'> I am a Vue JS developer. Get the red 💊🧠. </span>
         </h1>
         <div class="contact-paperRocket">
           <primary-button @click="mailTo" ref="contact" class="hero_contact">
@@ -5477,15 +5477,15 @@ export default {
   background-origin: border-box;
   background-size: 100%;
   background-repeat: no-repeat;
-  padding-left: #{scaleValue(80)};
+  padding-left: $body-padding;
   justify-items: center;
   align-items: center;
   @include respond(tab-port) {
     height: 140vh;
-    min-height: 950px;
+    min-height: 1020px;
     background: url("../assets/frame.svg"), url("../assets/frame-tab.png");
     background-size: 140%, 100%;
-    background-size: cover, cover;
+    background-size: cover, contain;
     background-position: left bottom, top right;
     background-repeat: no-repeat, no-repeat;
     grid-template-rows: 1fr 2fr;
@@ -5502,6 +5502,10 @@ export default {
     background-repeat: no-repeat, no-repeat;
   }
 }
+.text-shadow {
+    text-shadow:4px 1px 1px #ffffff;
+
+  }
 .hero_header {
   color: $color-primary-cyan;
   font-weight: 600;
@@ -5509,9 +5513,12 @@ export default {
   word-spacing: 1.3px;
   font-size: #{scaleValue(56.5)};
   margin-top: #{scaleValue(-65)};
-
+  // display:flex;
+  // justify-content:flex-end;
+  
   @include respond(tab-port) {
     font-size: #{scaleValue(80)};
+    margin-top:0;
   }
 
   @include respond(phone) {
@@ -5571,7 +5578,7 @@ export default {
   grid-column: 1/2;
 
   @include respond(tab-port) {
-    align-self: flex-end;
+    align-self: center;
   }
 
   @include respond(phone) {

@@ -1,7 +1,9 @@
 <template>
+<div>
+
   <div class="skill">
+     <h1 class="medium">MY SKILL STACK</h1>
     <div class="skill_story" ref="skillStory">
-      <h2 class="medium">A quality Website can bring opportunities for you</h2>
 
       <details open>
         <summary @click="arrowChange">
@@ -103,6 +105,8 @@
       </div>
     </div>
   </div>
+</div>
+
 </template>
 
 <script>
@@ -120,9 +124,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h2 {
-  font-weight: bold;
-}
+// header 
+
 .transitionArrow {
   transition: transform 0.3s;
 }
@@ -145,6 +148,7 @@ h2 {
   // margin for free space
   margin-top: 12rem;
   margin-bottom: 15rem;
+  padding: 0 $body-padding;
 
   @include respond(tab-port) {
     margin-top: 5rem;
@@ -152,35 +156,53 @@ h2 {
   }
   @include respond(phone) {
     margin-bottom: 12rem;
+     
   }
 
   display: grid;
   grid-auto-flow: row;
+  grid-template-rows: repeat(2,1fr);
   grid-template-columns: repeat(2, 1fr);
-  min-height: 650px;
+  min-height: 850px;
   height: 100vh;
   @include respond(tab-port) {
     grid-auto-columns: 1fr;
-    grid-template-rows: minmax(580px, 100vh) minmax(220px, 25vh);
+    grid-template-rows:auto minmax(580px, 100vh) minmax(450px, 25vh);
     height: 105vh;
-    min-height: 650px;
+    min-height: 1230px;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
   }
   @include respond(phone) {
     grid-auto-columns: 1fr;
-    grid-template-rows: minmax(550px, 110vh) minmax(220px, 25vh);
+    grid-template-rows:auto minmax(550px, 110vh) minmax(320px, 20vh);
     height: 85vh;
-    min-height: 650px;
+    min-height:1050px;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
   }
+  .medium {
+  font-weight: bold;
+  width: 70%;
+  // padding: 2px 6px;
+  font-size: #{scaleValue(80)};
+   grid-column: 1/-1;
+   margin-bottom: #{scaleValue(70)};
+   color: $color-primary-cyan;
+   @include respond(tab-port) {
+    margin-bottom: #{scaleValue(90)};
+    font-size: #{scaleValue(100)};
+   }
+   @include respond(phone) {
+     font-size: #{scaleValue(140)};
+   }
+  }
 
-  padding: 0 #{scaleValue(80)};
+  
 
   &_story {
     color: rgba($color-black, 0.6);
-    padding: 2px 6px;
+    // padding: 2px 6px;
 
     border: none;
   }
@@ -202,39 +224,55 @@ details[open] summary ~ * {
 }
 details > summary {
   list-style: none;
+  font-size: 2.5rem;
+
+  @include respond(tab-port) {
+    font-size: 1.8rem;
+  }
 }
 details > summary::-webkit-details-marker {
   display: none;
 }
 details {
   padding: 1rem 0;
+  @include respond(phone) {
+    // padding: 3rem 0;
+  }
 }
 details[open] > summary {
   color: $color-primary-cyan;
+ 
 }
 
 details[open] > p {
-  color: rgba($color-black, 0.6);
+  color: rgba($color-primary-pink, 0.99);
   height: 33%;
   line-height: 1.7;
-  font-size: #{scaleValue(20)};
-  @include respond(tab-port) {
+  font-size: 1.8rem;
+    padding-top: #{scaleValue(20)};
+  // padding-top: 5rem;
+  @include respond(tab-land) {
     font-size: 1.5rem;
   }
-  padding-top: #{scaleValue(10)};
+  @include respond(tab-port) {
+    font-size: 1.65rem;
+    padding-top: #{scaleValue(30)};
+  }
   @include respond(phone) {
-    font-size: 1.15rem;
+    font-size: 1.35rem;
   }
 }
 summary {
   font-size: #{scaleValue(28.27)};
   @include respond(tab-port) {
     font-size: 1.5rem;
+    padding: #{scaleValue(15)} #{scaleValue(8)};
   }
-  padding: #{scaleValue(5)} #{scaleValue(8)};
+  padding: #{scaleValue(10)} #{scaleValue(8)};
   background: rgb(243, 243, 243, 0.2);
+
   @include respond(phone) {
-    padding: 0 #{scaleValue(10)};
+    padding: #{scaleValue(15)} #{scaleValue(10)};
   }
   border: 1px solid #aaa;
   border-radius: 4px;
@@ -258,7 +296,8 @@ summary {
   // min-height: 100%;
 
   @include respond(tab-port) {
-    min-height: 30vh;
+    // min-height: 400px; 
+    min-height: 100%;
   }
 
   &_photo {
@@ -283,7 +322,11 @@ summary {
      
       top: 11%;
       @include respond(tab-port) {
-        top: 18%;
+        top: 15%;
+        left: 10%;
+      }
+      @include respond(phone) {
+        top: 25%;
         left: 10%;
       }
     }
@@ -291,7 +334,11 @@ summary {
       top: 32%;
       left: 31%;
       @include respond(tab-port) {
-        top: 11%;
+        top: 8%;
+        left: 35%;
+      }
+      @include respond(phone) {
+        top: 18%;
         left: 35%;
       }
     }
@@ -300,7 +347,11 @@ summary {
       top: 53%;
 
       @include respond(tab-port) {
-        top: 18%;
+        top: 15%;
+        left: 59%;
+      }
+      @include respond(phone) {
+        top: 25%;
         left: 59%;
       }
     }
