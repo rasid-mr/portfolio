@@ -86,7 +86,7 @@
       <div class="slide_header">
         <h1 class="slide_header-hero">
           <!-- <span class="highlight">Better</span> things for better living through -->
-           <a href="https://thoughtco-clone.netlify.app/" target="blank">
+           <a href="https://leafy-pothos-abeb64.netlify.app/" target="blank">
           <span class="highlight">Organic </span> veg & fruits.
           </a>
         </h1>
@@ -103,7 +103,7 @@
     <div class="slide-reveal slide-four">
       <div class="slide_header">
         <h1 class="slide_header-hero">
-           <a href="https://thoughtco-clone.netlify.app/" target="blank">
+           <a href="https://leafy-pothos-abeb64.netlify.app/" target="blank">
            <span class="highlight"> Easy </span> way to get
             Organic veg & fruit.
            </a>
