@@ -28,7 +28,7 @@
       >
       <!-- <img class="sumon" src="../assets/sumon.jpg" alt="I am sumon" /> -->
       <p class="about-me-detail">
-        When I was a 2nd grade student, my mom give me 1 taka everyday for tiffin.
+        <!-- When I was a 2nd grade student, my mom give me 1 taka everyday for tiffin.
         One day I thought, I should store my one taka everyday, after many days it will
         be huge😁. I was so happy just think about it, I am goonna be rich🤑 . I
         started to save money below the almary in our house. Everything going
@@ -36,12 +36,18 @@
         On forth day, I can just expense todays one taka on that day, no offense😅. Oh, now I can eat
         "JALMURRY". Ohh I can remember the taste it was so tasty. I think
         may be one more "JALLMURRY", won't be a bad idea. Eventually I expense my
-        all money in just one day🤣🤣🤣. Becoming rich has never been true😂.
+        all money in just one day🤣🤣🤣. Becoming rich has never been true😂. -->
+
+        Computer science is an amazeing subject, I first got my computer class in the college about HTML and CSS and C. 
+
+        My first website was a flower website, which tell different flower blossom time and its origin. This beautiful flower website
+        inspired me to dug deep into front end developing and build more interesting website.
         <br />
         <br />
 
-        I am chemistry mazor student at Jahangirnagor University. In my free
-        time(full-time😁), I do programming. It's really amazing to create a
+        I am chemistry mazor student at Jahangirnagor University.  
+         I also do programming. Diversity of the programming world is quite fascinating.
+          It's really amazing to create a
         website from ground and I enjoy this so much.
         <!-- <br />
         I ❤ to watch movie. My favourite actor is Tom Cruise. -->
@@ -110,11 +116,13 @@ img {
 }
 
 .about-me-detail {
-  font-size: #{scaleValue(24)};
+  font-size: #{scaleValue(26)};
   line-height: 1.5;
   word-spacing: 2px;
+  width: 90%;
   @include respond(tab-port) {
     margin-top: 4rem;
+    width: auto;
     font-size: 1.7rem;
      color: rgb(235, 235, 235);
   }

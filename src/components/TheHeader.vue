@@ -148,6 +148,7 @@ hideNav() {
   min-height: 8vh;
   font-size: 1rem;
   display: flex;
+  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
   color: white;
